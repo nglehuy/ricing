@@ -66,9 +66,9 @@ module-margin-right = 1
 font-0 = Code NewRoman Nerd Font Mono:style=Bold:pixelsize=13;4
 font-1 = FontAwesome5Free:style=Solid:pixelsize=11;3
 
-modules-left = powermenu cpu memory filesystem xwindow
+modules-left = powermenu cpu memory filesystem temperature xwindow
 modules-center = bspwm
-modules-right = xbacklight alsa calendar time
+modules-right = xbacklight alsa battery calendar time
 
 tray-position = right
 tray-padding = 2
@@ -409,7 +409,7 @@ label-volume-foreground = ${colors.foreground}
 label-volume-background = ${colors.background-alt}
 label-volume-padding = ${settings.padding}
 
-format-muted = !
+format-muted = 
 format-muted-font = 2
 format-muted-foreground = ${colors.background}
 format-muted-background = ${colors.yellow}
@@ -476,39 +476,49 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-charging = <animation-charging>  <label-charging>
-; format-charging-underline = ${colors.green}
-; format-charging-background = ${colorful.basil}
-format-charging-padding = ${general.padding}
+format-charging = <animation-charging><label-charging>
+format-discharging = <ramp-capacity><label-discharging>
 
-format-discharging = <ramp-capacity>  <label-discharging>
-; format-discharging-underline = ${self.format-charging-underline}
-format-discharging-padding = ${self.format-charging-padding}
+label-charging-padding = ${settings.padding}
+label-charging-background = ${colors.background-alt}
+label-charging-foreground = ${colors.foreground}
+label-discharging-padding = ${settings.padding}
+label-discharging-background = ${colors.background-alt}
+label-discharging-foreground = ${colors.foreground}
 
-format-full-prefix = "  "
-format-full-prefix-foreground = ${colors.green}
-format-full-padding = ${general.padding}
-; format-full-underline = ${self.format-charging-underline}
+format-full-prefix = ""
+format-full-prefix-foreground = ${colors.background}
+format-full-prefix-background = ${colors.purple}
+format-full-prefix-padding = ${settings.padding}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-foreground = ${colors.green}
+ramp-capacity-font = 2
+ramp-capacity-foreground = ${colors.background}
+ramp-capacity-background = ${colors.purple}
+ramp-capacity-padding = ${settings.padding}
 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-foreground = ${colors.green}
+animation-charging-font = 2
+animation-charging-foreground = ${colors.background}
+animation-charging-background = ${colors.purple}
+animation-charging-padding = ${settings.padding}
 animation-charging-framerate = 750
 
 animation-discharging-0 = 
 animation-discharging-1 = 
 animation-discharging-2 = 
-animation-discharging-foreground = ${colors.green}
+animation-discharging-font = 2
+animation-discharging-foreground = ${colors.background}
+animation-discharging-background = ${colors.purple}
+animation-discharging-padding = ${settings.padding}
 animation-discharging-framerate = 750
 
 [module/temperature]
@@ -516,25 +526,29 @@ type = internal/temperature
 thermal-zone = 0
 base-temperature = 45
 warn-temperature = 70
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp2_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp2_input
 interval = 1
 
-format = <ramp>  <label>
-format-warn = <ramp>  <label-warn>
-; format-warn-underline = ${colors.red}
-; format-underline = ${colors.red}
-; format-background = ${colorful.sky}
-format-padding = ${general.padding}
-format-warn-padding = ${self.format-padding}
+format = <ramp><label>
+format-warn = <ramp><label-warn>
 
 label = %temperature-c%
+label-foreground = ${colors.foreground}
+label-background = ${colors.background-alt}
+label-padding = ${settings.padding}
+
 label-warn = %temperature-c%
-label-warn-foreground = ${colorful.apple-red}
+label-warn-foreground = ${colors.red}
+label-warn-background = ${colors.background-alt}
+label-warn-padding = ${settings.padding}
 
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-foreground = ${colors.aqua}
+ramp-font = 2
+ramp-foreground = ${colors.background}
+ramp-background = ${colors.aqua}
+ramp-padding = ${settings.padding}
 
 [module/powermenu]
 type = custom/menu
@@ -553,14 +567,13 @@ menu-0-3 = Logout
 menu-0-3-exec = bspc quit 1 && killall -q polybar
 
 ; label-open = 
-label-open = 
-label-open-fonr = 2
+label-open = ""
+label-open-font = 2
 label-open-foreground = ${colors.background}
 label-open-background = ${colors.red}
 label-open-padding = ${settings.padding}
 label-close = Cancel
 label-close-foreground = ${colors.red}
-label-close-background = ${colors.background-alt}
 label-separator = |
 label-separator-foreground = ${colors.purple}
 
