@@ -17,7 +17,7 @@
 ;==========================================================
 
 [colors]
-background = ${xrdb:background:#282c34}
+background = #b6282c34
 background-alt = ${xrdb:colors8:#545862}
 foreground = ${xrdb:foreground:#c8ccd4}
 foreground-alt = ${xrdb:colors15:#c8ccd4}
@@ -66,9 +66,9 @@ module-margin-right = 1
 font-0 = Code NewRoman Nerd Font Mono:style=Bold:pixelsize=13;4
 font-1 = FontAwesome5Free:style=Solid:pixelsize=11;3
 
-modules-left = cpu memory filesystem xbacklight xwindow
+modules-left = powermenu cpu memory filesystem xwindow
 modules-center = bspwm
-modules-right = eth wlan alsa calendar time
+modules-right = xbacklight alsa calendar time
 
 tray-position = right
 tray-padding = 2
@@ -253,7 +253,7 @@ type = internal/xbacklight
 format = <label>
 format-prefix = ""
 format-prefix-font = 2
-format-prefix-background = ${colors.green}
+format-prefix-background = ${colors.aqua}
 format-prefix-foreground = ${colors.background}
 format-prefix-padding = ${settings.padding}
 
@@ -285,7 +285,7 @@ interval = 2
 format-prefix = ""
 format-prefix-font = 2
 format-prefix-foreground = ${colors.background}
-format-prefix-background = ${colors.red}
+format-prefix-background = ${colors.green}
 format-prefix-padding = ${settings.padding}
 
 label = %percentage%%
@@ -329,7 +329,7 @@ format-disconnected = <label-disconnected>
 format-disconnected-prefix-foreground = ${colors.background}
 format-disconnected-prefix-background = ${colors.purple}
 format-disconnected-prefix-padding = ${settings.padding}
-label-disconnected = %ifname% disconnected
+label-disconnected = disconnected
 label-disconnected-foreground = ${colors.foreground}
 label-disconnected-background = ${colors.background-alt}
 label-disconnected-padding = ${settings.padding}
@@ -544,26 +544,25 @@ expand-right = true
 format-spacing = 1
 
 menu-0-0 = Reboot
-menu-0-0-exec = gnome-session-quit --reboot
+menu-0-0-exec = systemctl reboot
 menu-0-1 = Hibernate
 menu-0-1-exec = systemctl hibernate
 menu-0-2 = Poweroff
-menu-0-2-exec = gnome-session-quit --power-off
+menu-0-2-exec = systemctl poweroff
 menu-0-3 = Logout
-menu-0-3-exec = gnome-session-quit --logout
+menu-0-3-exec = bspc quit 1 && killall -q polybar
 
 ; label-open = 
-format-prefix = 
-format-prefix-foreground = ${colors.red}
 label-open = 
-label-open-foreground = ${colors.red}
+label-open-fonr = 2
+label-open-foreground = ${colors.background}
+label-open-background = ${colors.red}
+label-open-padding = ${settings.padding}
 label-close = Cancel
 label-close-foreground = ${colors.red}
+label-close-background = ${colors.background-alt}
 label-separator = |
-; label-separator-foreground = ${colors.foreground-bar}
 label-separator-foreground = ${colors.purple}
-; format-background = ${colorful.brown}
-format-padding = ${general.padding}
 
 ; menu-1-0 = cancel
 ; menu-1-0-exec = menu-open-0

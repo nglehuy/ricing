@@ -51,3 +51,4 @@ thunar --daemon &
 /usr/lib/mate-notification-daemon/mate-notification-daemon &
 ## Welcome message
 ## sleep 1 && notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" &
+nm-applet &

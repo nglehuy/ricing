@@ -319,6 +319,11 @@ super + ctrl + space
 	{pkill picom ,\
 	picom --experimental-backend -b }
 
+# Lock
+alt + l
+	light-locker-command --lock
+
 # Remove receptacles
 super + BackSpace
   for i in $(bspc query -N -n .leaf.!window.local); do bspc node $i -k; done
+
