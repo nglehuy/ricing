@@ -313,11 +313,11 @@ super + shift + r
 	bspwmrc
 #edit this file
 alt + ctrl + space
-	$TERMINAL $EDITOR ~/.config/sxhkd/sxhkdrc
+	sxhkdrc
 # Toggle compositing
 super + ctrl + space
 	{pkill picom ,\
-	picom -b }
+	picom --experimental-backend -b }
 
 # Remove receptacles
 super + BackSpace
