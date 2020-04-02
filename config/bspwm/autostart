@@ -15,7 +15,7 @@ sh ~/.fehbg &
 #   grep -q 'vsync = "opengl-swc";' ~/.config/compton.conf || echo 'vsync = "opengl-swc";' >> ~/.config/compton.conf
 # fi
 ## Reduces flicker. Disabling saves resources.
-picom -b &
+picom --experimental-backend -b &
 ## enable local fonts in .fonts directory
 xset +fp /usr/share/fonts/local &
 xset +fp /usr/share/fonts/misc &
@@ -33,6 +33,8 @@ xset -dpms &
 xbacklight -set 15 &
 ## Repeat keys
 xset r rate 350 50
+## Touchpad natural scrolling (xinput list => xinput list-props $id)
+xinput set-prop 13 304 1
 ## Run screenlock when suspending
 light-locker &
 ## Make monitor settings persist between reboots

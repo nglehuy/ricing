@@ -258,11 +258,11 @@ super + shift + space
 #super + p
 #	dmenu_recent -h $PANEL_HEIGHT -fn 'xos4 Terminus:size=15' -i
 
-super + z
-	$TERMINAL
+ctrl + alt + t
+  open-terminal-here
 
-super + shift + z
-	open-terminal-here
+super + shift + Return
+	$TERMINAL
 	
 super + r
 	rofi-finder.sh
@@ -271,11 +271,11 @@ super + shift + b
 	$BROWSER
     		
 super + e
-	nautilus
+	$TERMINAL ranger
 
 # Use slightly bigger font for ranger
 super + shift + e
-	$TERMINAL ranger
+	nautilus
 
 Print
 	scrot
