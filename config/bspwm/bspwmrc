@@ -1,9 +1,7 @@
 #! /bin/sh
 . "${HOME}/.cache/wal/colors.sh" # source the colors.
 gap=15
-PANEL_HEIGHT=50
 export gap
-export PANEL_HEIGHT
 
 #This creates negative padding equal to window gap so that gaps are shown only between windows and not on desktop edges
 bspc config window_gap $gap;
@@ -63,7 +61,7 @@ bspc rule -a file-roller state=pseudo_tiled
 bspc rule -a transmission-gtk state=pseudo_tiled
 bspc rule -a conky sticky=on manage=off lower=on
 bspc rule -a astime sticky=on
-bspc rule -a yad state=floating
+bspc rule -a '*:yad' state=floating focus=on
 bspc rule -a Docky layer=above border=off manage=on
 bspc rule -a Plank layer=above border=off manage=on
 bspc rule -a wbar layer=above
@@ -111,11 +109,13 @@ bspc config external_rules_command /usr/bin/pseudo_automatic_mode
 #Source autostartfile. Uncomment this if you use bspwm-git
 #. $HOME/.config/bspwm/autostart
 #limepanel &
-#Polybar
-~/.config/polybar/launch.sh &
 # Alter compton settings if using intel graphics
 # GRAPHIC_CARD=$(lspci | grep -i "vga" | sed 's/.*://' | sed 's/(.*//' | sed 's/^[ \t]*//')
 # if [[ $(echo $GRAPHIC_CARD | grep -i 'intel\|lenovo') != "" ]]; then MCODE='initrd=\intel-ucode.img'
 #   sed -i 's/"xrender"/"glx"/' ~/.config/compton.conf
 #   grep -q 'vsync = "opengl-swc";' ~/.config/compton.conf || echo 'vsync = "opengl-swc";' >> ~/.config/compton.conf
 # fi
+# POLYBAR
+~/.config/polybar/launch.sh &
+## PYWAL
+wal --theme ~/.config/colorschemes/base16-onedark.json

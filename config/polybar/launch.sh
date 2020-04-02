@@ -13,16 +13,10 @@ sleep 1
 if type "xrandr"; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
     MONITOR=$m
-    polybar -c $HOME/.config/polybar/config -r right 2> /tmp/polybar_log &
-    polybar -c $HOME/.config/polybar/config -r center 2> /tmp/polybar_log &
-    polybar -c $HOME/.config/polybar/config -r left 2> /tmp/polybar_log &
-#    polybar -c $HOME/.config/polybar/config -r one 2> /tmp/polybar_log &
+    polybar -c $HOME/.config/polybar/config -r panel 2> /tmp/polybar_log &
   done
 else
-  polybar -c $HOME/.config/polybar/config -r right 2> /tmp/polybar_log &
-  polybar -c $HOME/.config/polybar/config -r center 2> /tmp/polybar_log &
-  polybar -c $HOME/.config/polybar/config -r left 2> /tmp/polybar_log &
-#  polybar -c $HOME/.config/polybar/config -r one 2> /tmp/polybar_log &
+  polybar -c $HOME/.config/polybar/config -r panel 2> /tmp/polybar_log &
 fi
 
 echo "Bars launched..."

@@ -12,6 +12,7 @@ export BSPWM_SOCKET="/tmp/bspwm-socket"
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
 export BROWSER=/usr/bin/google-chrome-stable
 export TERMINAL=/usr/bin/kitty
+export PANEL_HEIGHT=35
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export EDITOR=/usr/bin/nvim
 export VISUAL="/usr/bin/ranger --selectfile"

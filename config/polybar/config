@@ -17,176 +17,99 @@
 ;==========================================================
 
 [colors]
-; background = ${xrdb:color0:#dd262626}
-; background = #1d2021
-; background = ${cyberdark.color1}
-background = #deffffff
-background-alt = ${gruvbox.bg-dark}
-;background-alt = #666
-;foreground = ${xrdb:color7:#222}
-foreground = ${gruvbox.fg-light}
-; foreground = #eee
-foreground-alt = #666666
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+background = ${xrdb:background:#282c34}
+background-alt = ${xrdb:colors8:#545862}
+foreground = ${xrdb:foreground:#c8ccd4}
+foreground-alt = ${xrdb:colors15:#c8ccd4}
 transparent = #000000000
+red = ${xrdb:colors1:#e06c75}
+green = ${xrdb:colors2:#98c379}
+yellow = ${xrdb:colors3:#e5c07b}
+blue = ${xrdb:colors4:#61afef}
+purple = ${xrdb:colors5:#c678dd}
+aqua = ${xrdb:colors6:#56b6c2}
 
-[general]
-padding = 3
-
-[gruvbox]
-bg-dark = #1d2021
-fg-dark = #ebdbb2
-bg-light = #fbf1c7
-fg-light = #3c3836
-red = #cc241d
-green = #98971a
-yellow = #d79921
-blue = #458588
-purple = #b16286
-aqua = #689d6a
-gray = #a89984
-
-[colorful]
-slate = #626d71
-ceramic = #cdcdc0
-bronze = #c05805
-grass = #3f681c
-green = #4CAF50
-sunflower = #ffbb00
-sky = #375e97
-orange = #FB8C00
-brown = #806641
-apple-red = #d13525
-fig = #4c3f54
-basil = #486824
-
-[bar/right]
+[bar/panel]
 monitor = ${env:MONITOR:}
-width = 25%
-height = 30
+; Dimension defined as pixel value (e.g. 35) or percentage (e.g. 50%),
+; the percentage can optionally be extended with a pixel offset like so:
+; 50%:-10, this will result in a width or height of 50% minus 10 pixels
+width = 100%:-30
+height = 23
 bottom = false
-offset-x = 75%:-10
-offset-y = 10
-radius = 15
+; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
+; the percentage can optionally be extended with a pixel offset like so:
+; 50%:-10, this will result in an offset in the x or y direction 
+; of 50% minus 10 pixels
+offset-x = 15
+offset-y = 5
+radius = 0
 fixed-center = true
+dim-value = 0.9
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 0
-line-color = #eee
+; line-color = #eee
 
-border-size = 0
-; border-bottom-size = 0
-; border-color = ${colors.background}
-border-transparent = true
+border-size = 4
+border-color = ${colors.background}
+border-transparent = false
 
-padding-left = 5
-padding-right = 5
+padding-left = 1
+padding-right = 1
 
-module-margin-left = 0
-module-margin-right = 0
+module-margin-left = 1
+module-margin-right = 1
 
-font-0 = CodeNewRoman Nerd Font Mono:style=Book:size=11;3
-font-1 = Font Awesome 5 Brands:style=Regular:size=11;2
-font-2 = Roboto:style=Bold:size=11;2
-; font-3 = unifont:fontformat=truetype:size=8:antialias=false;2
+font-0 = Code NewRoman Nerd Font Mono:style=Bold:pixelsize=13;4
+font-1 = FontAwesome5Free:style=Solid:pixelsize=11;3
 
-modules-left = 
-modules-center = 
-modules-right = calendar time 
+modules-left = cpu memory filesystem xbacklight xwindow
+modules-center = bspwm
+modules-right = eth wlan alsa calendar time
 
-tray-position = left
+tray-position = right
 tray-padding = 2
-tray-detached = true
-tray-offset-x = 17
+tray-detached = false
+tray-offset-x = 0
 tray-offset-y = 0
 tray-maxsize = 16
 
 override-redirect = true
 
 wm-restack = bspwm
-;wm-restack = i3
+; wm-restack = i3
+; 
+; scroll-up = bspwm-desknext
+; scroll-down = bspwm-deskprev
+; 
+; scroll-up = i3wm-wsnext
+; scroll-down = i3wm-wsprev
 
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-separator =
+separator = 
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-[bar/center]
-inherit = bar/right
-
-width = 20%
-
-offset-x = 40%
-offset-y = 10
-
-modules-center = bspwm
-modules-left =
-modules-right =
-
-tray-position = none
-
-[bar/left]
-inherit = bar/right
-
-width = 25%
-
-offset-x = 0%:10
-offset-y = 10
-
-modules-left = powermenu cpu temperature memory filesystem
-modules-center =
-modules-right = 
-
-tray-position = none
-
-[bar/one]
-inherit = bar/right
-
-width = 100%
-height = 25
-offset-x = 0
-offset-y = 0
-radius = 0
-
-border-size = 2
-border-color = ${colors.background}
-
-padding-left = 3
-padding-right = 3
-
-modules-left = powermenu cpu temperature memory filesystem
-modules-center = bspwm
-modules-right = alsa battery calendar time
-
-tray-position = right
-tray-detached = false
-tray-offset-x = 0
-
-override-redirect = true
-
 [module/xwindow]
 type = internal/xwindow
 label = %title%
-label-maxlen = 50
+label-maxlen = 20
 label-empty = Coolest Desktop Ever
-format-padding = ${general.padding}
+label-empty-padding = ${settings.padding}
+label-empty-background = ${colors.background-alt}
+label-empty-foreground = ${colors.foreground}
+label-padding = ${settings.padding}
+label-background = ${colors.background-alt}
+label-foreground = ${colors.foreground}
+
+format-prefix = ""
 format-prefix-font = 2
-format-prefix = "  "
-format-prefix-foreground = ${gruvbox.yellow}
-; format-background = ${colorful.fig}
-; format-background = ${cyberdark.color1}
-format-background = ${colors.background}
-format-foreground = ${colors.foreground}
+format-prefix-padding = ${settings.padding}
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.yellow}
 
 ; [module/xkeyboard]
 ; type = internal/xkeyboard
@@ -212,41 +135,53 @@ interval = 25
 
 mount-0 = /
 
-format-mounted-prefix = "  "
-format-mounted-prefix-foreground = ${gruvbox.red}
-label-mounted = %percentage_used%%
+format-mounted-prefix = ""
+format-mounted-prefix-font = 2
+format-mounted-prefix-padding = ${settings.padding}
+format-mounted-prefix-background = ${colors.purple}
+format-mounted-prefix-foreground = ${colors.background}
+
+label-mounted = %mountpoint%: %percentage_used%%
 label-mounted-foreground = ${colors.foreground}
-; label-mounted-background = ${colorful.grass}
-format-mounted-padding = ${general.padding}
-; label-mounted-underline = ${colors.foreground}
-format-unmounted-prefix = 
-label-unmounted = %mountpoint% not mounted
+label-mounted-background = ${colors.background-alt}
+label-mounted-padding = ${settings.padding}
+
+format-unmounted-prefix = ""
+format-unmounted-prefix-font = 2
+format-unmounted-prefix-padding = ${settings.padding}
+format-unmounted-prefix-background = ${colors.red}
+format-unmounted-prefix-foreground = ${colors.background}
+
+label-unmounted = %mountpoint%: not mounted
 label-unmounted-foreground = ${colors.foreground}
-; label-unmounted-underline = ${colors.foreground}
-format-unmounted-padding = ${self.format-mounted-padding}
+label-unmounted-background = ${colors.background-alt}
 
 
 [module/bspwm]
 type = internal/bspwm
 
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused = 
+label-focused-font = 2
+label-focused-foreground= ${colors.blue}
+label-focused-padding = ${settings.padding}
 
-label-occupied = %index%
-label-occupied-padding = 2
+label-occupied = 
+label-occupied-font = 2
+label-occupied-foreground = ${colors.green}
+label-occupied-padding = ${settings.padding}
 
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent = 
+label-urgent-font = 2
+label-urgent-background = ${colors.red}
+label-urgent-padding = ${settings.padding}
 
-label-empty = %index%
+label-empty = 
+label-empty-font = 2
 label-empty-foreground = ${colors.foreground}
-label-empty-padding = 2
+label-empty-padding = ${settings.padding}
 
 Separator in between workspaces
-label-separator = |
+label-separator = 
 
 [module/i3]
 type = internal/i3
@@ -259,7 +194,7 @@ pin-workspaces = true
 
 label-mode-padding = ${general.padding}
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-background = ${colors.blue}
 
 ; focused = Active workspace on focused monitor
 label-focused = 
@@ -278,15 +213,12 @@ label-unfocused-background = ${colors.background}
 ; visible = Active workspace on unfocused monitor
 label-visible = 
 label-visible-background = ${self.label-focused-background}
-; label-visible-background = ${colors.grass}
 label-visible-foreground = ${self.label-focused-foreground}
-; label-visible-underline = ${colorful.grass}
-; label-visible-underline = ${cyberdark.color13}
 format-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = 
-label-urgent-foreground = ${colors.alert}
+label-urgent-foreground = ${colors.red}
 label-urgent-background = ${colors.background}
 label-urgent-padding = ${self.label-focused-padding}
 
@@ -319,14 +251,16 @@ type = internal/xbacklight
 
 ; format = <label>  <bar>
 format = <label>
-format-prefix = "  "
-format-prefix-foreground = ${gruvbox.yellow}
+format-prefix = ""
+format-prefix-font = 2
+format-prefix-background = ${colors.green}
+format-prefix-foreground = ${colors.background}
+format-prefix-padding = ${settings.padding}
+
 label = %percentage%%
-; format-background = ${colorful.ceramic}
-format-background = ${colors.background}
-; format-foreground = ${colors.foreground-alt}
-format-foreground = ${colors.foreground}
-format-padding = ${general.padding}
+label-foreground = ${colors.foreground}
+label-background = ${colors.background-alt}
+label-padding = ${settings.padding}
 
 ; bar-width = 10
 ; bar-indicator = 
@@ -348,45 +282,63 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${gruvbox.purple}
-; format-background = ${colorful.apple-red}
-format-background = ${colors.background}
-format-padding = ${general.padding}
-label = %percentage:2%%
+format-prefix = ""
+format-prefix-font = 2
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.red}
+format-prefix-padding = ${settings.padding}
+
+label = %percentage%%
+label-padding = ${settings.padding}
+label-foreground = ${colors.foreground}
+label-background = ${colors.background-alt}
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "  "
-format-prefix-foreground = ${gruvbox.blue}
-; format-foreground = ${colors.foreground-alt}
-; format-underline = ${colors.blue}
-; format-background = ${colorful.orange}
-format-background = ${colors.background}
-format-padding = ${general.padding}
+format-prefix = ""
+format-prefix-font = 2
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.blue}
+format-prefix-padding = ${settings.padding}
+
 label = %percentage_used%%
+label-padding = ${settings.padding}
+label-foreground = ${colors.foreground}
+label-background = ${colors.background-alt}
 
 [module/wlan]
 type = internal/network
 interface = wlp3s0
 interval = 3.0
 
-format-connected = <ramp-signal>
-format-connected-foreground = ${gruvbox.purple}
-; label-connected = %essid%
-format-connected-padding = ${general.padding}
+format-connected-prefix = ""
+format-connected-font = 2
+format-connected-prefix-foreground = ${colors.background}
+format-connected-prefix-background = ${colors.purple}
+format-connected-prefix-padding = ${settings.padding}
+format-connected = <label-connected>
+label-connected = %essid%
+label-connected-foreground = ${colors.foreground}
+label-connected-background = ${colors.background-alt}
+label-connected-padding = ${settings.padding}
 
-format-disconnected = 
-format-disconnected-foreground = ${colors.foreground-alt}
-format-disconnected-padding = ${general.padding}
-;label-disconnected = %ifname% disconnected
+format-disconnected-prefix = ""
+format-disconnected-font = 2
+format-disconnected = <label-disconnected>
+format-disconnected-prefix-foreground = ${colors.background}
+format-disconnected-prefix-background = ${colors.purple}
+format-disconnected-prefix-padding = ${settings.padding}
+label-disconnected = %ifname% disconnected
+label-disconnected-foreground = ${colors.foreground}
+label-disconnected-background = ${colors.background-alt}
+label-disconnected-padding = ${settings.padding}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+; ramp-signal-0 = 
+; ramp-signal-1 = 
+; ramp-signal-2 = 
+; ramp-signal-3 = 
+; ramp-signal-4 = 
 ;ramp-signal-foreground = ${colors.foreground}
 
 [module/eth]
@@ -394,15 +346,11 @@ type = internal/network
 interface = enp2s0
 interval = 3.0
 
-format-connected = 
-format-connected-foreground = ${gruvbox.blue}
-format-connected-padding = ${general.padding}
-;label-connected = %local_ip%
-
-format-disconnected = 
-format-disconnected-foreground = ${colors.foreground-alt}
-format-disconnected-padding = ${general.padding}
-;label-disconnected = %ifname% disconnected
+format-connected = ""
+format-connected-font = 2
+format-connected-foreground = ${colors.background}
+format-connected-background = ${colors.aqua}
+format-connected-padding = ${settings.padding}
 
 [module/calendar]
 type = custom/script
@@ -410,10 +358,18 @@ exec = ~/.config/polybar/calendar.sh
 interval = 5
 click-left = ~/.config/polybar/calendar.sh --popup
 
-format-prefix = "  "
-format-prefix-foreground = ${gruvbox.blue}
-format-padding = ${general.padding}
+format = <label>
 
+format-prefix = ""
+format-prefix-font = 2
+format-prefix-padding = ${settings.padding}
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.blue}
+
+label = %output%
+label-background = ${colors.background-alt}
+label-foreground = ${colors.foreground}
+label-padding = ${settings.padding}
 
 [module/date]
 type = internal/date
@@ -422,10 +378,7 @@ interval = 5
 date = %a %d %b %y
 
 format-prefix = "  "
-format-prefix-foreground = ${gruvbox.blue}
-; format-underline = ${colors.orange}
-; format-background = ${colorful.bronze}
-; format-background = ${cyberdark.color1}
+format-prefix-foreground = ${colors.blue}
 format-padding = ${general.padding}
 
 label = %date%
@@ -436,34 +389,39 @@ interval = 5
 
 time = %I:%M %p
 
-format-prefix = "  "
-format-prefix-foreground = ${gruvbox.green}
-; format-underline = ${colors.orange}
-; format-background = ${colorful.bronze}
-; format-background = ${cyberdark.color1}
-format-padding = ${general.padding}
+format-prefix = ""
+format-prefix-font = 2
+format-prefix-padding = ${settings.padding}
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.green}
+format-background = ${colors.background-alt}
 
 label = %time%
+label-padding = ${settings.padding}
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
 ; format-volume = <label-volume>  <bar-volume>
-format-volume = <ramp-volume>  <label-volume>
+format-volume = <ramp-volume><label-volume>
 label-volume = %percentage%%
-format-volume-foreground = ${gruvbox.yellow}
-format-volume-padding = ${general.padding}
+label-volume-foreground = ${colors.foreground}
+label-volume-background = ${colors.background-alt}
+label-volume-padding = ${settings.padding}
 
-format-muted =  <label-muted>
-label-muted = 
-format-muted-foreground = ${colors.foreground-alt}
-;format-muted-background = ${self.format-volume-background}
-format-muted-padding = ${self.format-volume-padding}
+format-muted = !
+format-muted-font = 2
+format-muted-foreground = ${colors.background}
+format-muted-background = ${colors.yellow}
+format-muted-padding = ${settings.padding}
 
+ramp-volume-font = 2
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-ramp-volume-foreground = ${gruvbox.yellow}
+ramp-volume-foreground = ${colors.background}
+ramp-volume-background = ${colors.yellow}
+ramp-volume-padding = ${settings.padding}
 
 
 ; bar-volume-width = 10
@@ -528,7 +486,7 @@ format-discharging = <ramp-capacity>  <label-discharging>
 format-discharging-padding = ${self.format-charging-padding}
 
 format-full-prefix = "  "
-format-full-prefix-foreground = ${gruvbox.green}
+format-full-prefix-foreground = ${colors.green}
 format-full-padding = ${general.padding}
 ; format-full-underline = ${self.format-charging-underline}
 
@@ -537,20 +495,20 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-foreground = ${gruvbox.green}
+ramp-capacity-foreground = ${colors.green}
 
 animation-charging-0 = 
 animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-foreground = ${gruvbox.green}
+animation-charging-foreground = ${colors.green}
 animation-charging-framerate = 750
 
 animation-discharging-0 = 
 animation-discharging-1 = 
 animation-discharging-2 = 
-animation-discharging-foreground = ${gruvbox.green}
+animation-discharging-foreground = ${colors.green}
 animation-discharging-framerate = 750
 
 [module/temperature]
@@ -576,7 +534,7 @@ label-warn-foreground = ${colorful.apple-red}
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-foreground = ${gruvbox.aqua}
+ramp-foreground = ${colors.aqua}
 
 [module/powermenu]
 type = custom/menu
@@ -596,14 +554,14 @@ menu-0-3-exec = gnome-session-quit --logout
 
 ; label-open = 
 format-prefix = 
-format-prefix-foreground = ${gruvbox.red}
+format-prefix-foreground = ${colors.red}
 label-open = 
-label-open-foreground = ${gruvbox.red}
+label-open-foreground = ${colors.red}
 label-close = Cancel
-label-close-foreground = ${gruvbox.red}
+label-close-foreground = ${colors.red}
 label-separator = |
 ; label-separator-foreground = ${colors.foreground-bar}
-label-separator-foreground = ${gruvbox.purple}
+label-separator-foreground = ${colors.purple}
 ; format-background = ${colorful.brown}
 format-padding = ${general.padding}
 
@@ -619,6 +577,7 @@ format-padding = ${general.padding}
 
 [settings]
 screenchange-reload = true
+padding = 1
 ;compositing-background = xor
 ;compositing-background = screen
 ;compositing-foreground = source
