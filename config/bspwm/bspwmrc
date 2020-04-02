@@ -114,8 +114,8 @@ bspc config external_rules_command /usr/bin/pseudo_automatic_mode
 #Polybar
 ~/.config/polybar/launch.sh &
 # Alter compton settings if using intel graphics
-GRAPHIC_CARD=$(lspci | grep -i "vga" | sed 's/.*://' | sed 's/(.*//' | sed 's/^[ \t]*//')
-if [[ $(echo $GRAPHIC_CARD | grep -i 'intel\|lenovo') != "" ]]; then MCODE='initrd=\intel-ucode.img'
-  sed -i 's/"xrender"/"glx"/' ~/.config/compton.conf
-  grep -q 'vsync = "opengl-swc";' ~/.config/compton.conf || echo 'vsync = "opengl-swc";' >> ~/.config/compton.conf
-fi
+# GRAPHIC_CARD=$(lspci | grep -i "vga" | sed 's/.*://' | sed 's/(.*//' | sed 's/^[ \t]*//')
+# if [[ $(echo $GRAPHIC_CARD | grep -i 'intel\|lenovo') != "" ]]; then MCODE='initrd=\intel-ucode.img'
+#   sed -i 's/"xrender"/"glx"/' ~/.config/compton.conf
+#   grep -q 'vsync = "opengl-swc";' ~/.config/compton.conf || echo 'vsync = "opengl-swc";' >> ~/.config/compton.conf
+# fi
