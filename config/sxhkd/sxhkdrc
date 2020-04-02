@@ -6,7 +6,7 @@
 
 # Show keybindings
 super + F1
-	$TERMINAL nvim keybindings.sh
+	$TERMINAL keybindings.sh
 #
 # Window manipulation
 # ______________
@@ -16,7 +16,7 @@ super + x
 	bspc  node -c
 
 # Kill window
-super + shift + q
+super + shift + x
 	bspc  node -k
 
 # Toggle tiling mode of window
@@ -126,11 +126,11 @@ super + Tab
 	WindowSelector
 	
 #Focus windows by direction, works with multihead
-super +  {a,s,w,d}
-    focusmover {west,south,north,east}
+# super +  {a,s,w,d}
+#     focusmover {west,south,north,east}
 
-#super +  {h,j,k,l}
-#    focusmover {west,south,north,east}
+super +  {h,j,k,l}
+    focusmover {west,south,north,east}
 
 super +  {Left,Down,Up,Right}
     focusmover {west,south,north,east}
@@ -258,10 +258,8 @@ super + shift + space
 #super + p
 #	dmenu_recent -h $PANEL_HEIGHT -fn 'xos4 Terminus:size=15' -i
 
-super + shift + Return
-	kitty
 super + z
-	kitty
+	$TERMINAL
 
 super + shift + z
 	open-terminal-here
@@ -273,7 +271,7 @@ super + shift + b
 	$BROWSER
     		
 super + e
-	thunar
+	nautilus
 
 # Use slightly bigger font for ranger
 super + shift + e
@@ -315,11 +313,11 @@ super + shift + r
 	bspwmrc
 #edit this file
 alt + ctrl + space
-	$TERMINAL nvim ~/.config/sxhkd/sxhkdrc
+	$TERMINAL $EDITOR ~/.config/sxhkd/sxhkdrc
 # Toggle compositing
 super + ctrl + space
-	{pkill compton ,\
-	compton -b }
+	{pkill picom ,\
+	picom -b }
 
 # Remove receptacles
 super + BackSpace
