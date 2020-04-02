@@ -277,7 +277,7 @@ super + e
 
 # Use slightly bigger font for ranger
 super + shift + e
-	kitty ranger
+	$TERMINAL ranger
 
 Print
 	scrot

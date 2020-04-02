@@ -10,7 +10,7 @@ export PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
-# export BROWSER=/usr/bin/firefox
+export BROWSER=/usr/bin/google-chrome-stable
 export TERMINAL=/usr/bin/kitty
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export EDITOR=/usr/bin/nvim
