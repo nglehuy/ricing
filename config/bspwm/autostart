@@ -40,7 +40,7 @@ light-locker &
 ## Make monitor settings persist between reboots
 eval $(awk -F'=' '/Exec=/ {print $2}' ~/.config/autostart/lxrandr-autostart.desktop) &
 ## Notify about package updates
-update-checker 7200 &
+## update-checker 7200 &
 ## Map super key to trigger rofi when used alone
 xcape -e 'Super_L=Super_L|Shift_L|space' &
 ## Polkit agent

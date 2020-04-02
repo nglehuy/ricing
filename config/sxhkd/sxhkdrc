@@ -12,7 +12,7 @@ super + F1
 # ______________
 
 # Close window
-super + x
+super + shift + q
 	bspc  node -c
 
 # Kill window
@@ -66,11 +66,11 @@ ctrl + space
 	auto-presel
 	
 # Presel window for splitting in certain direction
-alt + ctrl + {a,s,w,d}
-	bspc node -p \~{west,south,north,east} -i
+# alt + ctrl + {a,s,w,d}
+#	bspc node -p \~{west,south,north,east} -i
 
-#alt + ctrl + {h,j,k,l}
-#	bspc node -p \~{west,south,north,east}
+alt + ctrl + {h,j,k,l}
+	bspc node -p \~{west,south,north,east}
 
 alt + ctrl + {Left,Down,Up,Right}
 	bspc node -p \~{west,south,north,east}
@@ -138,22 +138,22 @@ super +  {Left,Down,Up,Right}
 # Move tiled windows. Moving a tiled window to 
 # preselected one moves into preselection instead. 
 # Moving out of the screen should move the window to next monitor if possible
-super + shift + {a,s,w,d}
-	windowgrabber {west,south,north,east}
+# super + shift + {a,s,w,d}
+# 	windowgrabber {west,south,north,east}
 
-#super + shift + {h,j,k,l}
-#	windowgrabber {west,south,north,east}
+super + shift + {h,j,k,l}
+	windowgrabber {west,south,north,east}
 	
 # Different style of movement: transplant into window in chosen direction
 super + shift + {Left,Down,Up,Right}
 	euclid_mover {west,south,north,east}
 
 #resize windows
-super + ctrl + {a,s,w,d}
-	bspwm_resize.sh {west,south,north,east}
+# super + ctrl + {a,s,w,d}
+# 	bspwm_resize.sh {west,south,north,east}
 
-#super + ctrl + {h,j,k,l}
-#	bspwm_resize.sh {west,south,north,east}
+super + ctrl + {h,j,k,l}
+	bspwm_resize.sh {west,south,north,east}
 	
 super + ctrl + {Left,Down,Up,Right}
 	bspwm_resize.sh {west,south,north,east}
