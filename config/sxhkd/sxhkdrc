@@ -6,7 +6,7 @@
 
 # Show keybindings
 super + F1
-	$TERMINAL -e keybindings.sh
+	$TERMINAL nvim keybindings.sh
 #
 # Window manipulation
 # ______________
@@ -315,7 +315,7 @@ super + shift + r
 	bspwmrc
 #edit this file
 alt + ctrl + space
-	$GUI_EDITOR ~/.config/sxhkd/sxhkdrc
+	$TERMINAL nvim ~/.config/sxhkd/sxhkdrc
 # Toggle compositing
 super + ctrl + space
 	{pkill compton ,\

@@ -314,7 +314,7 @@ super + shift + r
 	bspwmrc
 #edit this file
 alt + ctrl + space
-	$GUI_EDITOR ~/.config/sxhkd/sxhkdrc
+	nvim ~/.config/sxhkd/sxhkdrc
 # Toggle compositing
 super + ctrl + space
 	{pkill compton ,\
