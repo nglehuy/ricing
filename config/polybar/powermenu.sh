@@ -1,8 +1,5 @@
 #!/usr/bin/env sh
 
-YAD_WIDTH=350
-YAD_HEIGHT=100
-
 case "$1" in
 --popup)
     if [ "$(xdotool getwindowfocus getwindowname)" = "yad-powermenu" ]; then
@@ -10,13 +7,14 @@ case "$1" in
         exit 0
     fi
     
-    yad --width=$YAD_WIDTH --height=$YAD_HEIGHT --center --skip-taskbar \
+    yad --width=0 --height=0 --center --skip-taskbar \
       --title="yad-powermenu" --close-on-unfocus --fixed --undecorated \
-      --form --colums=1 --seperator=" " --align=center --no-buttons \
-      --field="Reboot:FBTN" "notify-send Reboot" \
-      --field="Shutdown:FBTN" "notify-send Shutdown" \
-      --field="Hibernate:FBTN" "notify-send Hibernate" \
-      --field="Logout:FBTN" "notify-send Logout" \
+      --text="POWERMENU OPTIONS" --text-align=center \
+      --form --columes=4 --align=center --no-buttons \
+      --field="Reboot:FBTN" "systemctl reboot" \
+      --field="Shutdown:FBTN" "systemctl poweroff" \
+      --field="Hibernate:FBTN" "systemctl hibernate" \
+      --field="Logout:FBTN" "bspc quit 1" \
       >/dev/null &
     ;;
 *)
