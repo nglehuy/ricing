@@ -65,4 +65,4 @@ blueman-applet &
 ## IBUS
 ibus-daemon -drx &
 ## PYWAL
-wal --theme ~/.config/colorschemes/base16-onedark.json
+wal --theme base16-onedark &
