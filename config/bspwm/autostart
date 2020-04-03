@@ -52,3 +52,4 @@ thunar --daemon &
 ## Welcome message
 ## sleep 1 && notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" &
 nm-applet &
+blueman-applet &
