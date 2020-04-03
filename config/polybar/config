@@ -35,7 +35,7 @@ monitor = ${env:MONITOR:}
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in a width or height of 50% minus 10 pixels
 width = 100%:-30
-height = 23
+height = 22
 bottom = false
 ; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 ; the percentage can optionally be extended with a pixel offset like so:
@@ -63,7 +63,9 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = CodeNewRoman Nerd Font:style=Bold:pixelsize=13;4
+locale = en_US.UTF-8
+
+font-0 = CodeNewRoman Nerd Font:style=Bold:pixelsize=12;3.5
 font-1 = FontAwesome5Free:style=Solid:pixelsize=11;3
 font-2 = FontAwesome5Brands:style=Solid:pixelsize=11;3
 
@@ -77,6 +79,8 @@ tray-detached = false
 tray-offset-x = 0
 tray-offset-y = 0
 tray-maxsize = 16
+tray-scale = 1.0
+tray-transparent = true
 
 override-redirect = true
 
@@ -165,25 +169,25 @@ pin-workspaces = true
 
 format = <label-state>
 
-label-focused = %name%
+label-focused = %index%
 label-focused-font = 2
 label-focused-foreground = ${colors.background}
 label-focused-background = ${colors.blue}
 label-focused-padding = ${settings.padding}
 
-label-occupied = %name%
+label-occupied = %index%
 label-occupied-font = 2
 label-occupied-foreground = ${colors.background}
 label-occupied-background= ${colors.green}
 label-occupied-padding = ${settings.padding}
 
-label-urgent = %name%
+label-urgent = %index%
 label-urgent-font = 2
 label-urgent-foreground = ${colors.background}
 label-urgent-background = ${colors.red}
 label-urgent-padding = ${settings.padding}
 
-label-empty = %name%
+label-empty = %index%
 label-empty-font = 2
 label-empty-foreground = ${colors.foreground}
 label-empty-background = ${colors.background-alt}

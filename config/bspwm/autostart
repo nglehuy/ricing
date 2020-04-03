@@ -17,6 +17,7 @@ sh ~/.fehbg &
 ## Reduces flicker. Disabling saves resources.
 picom --experimental-backend -b &
 ## enable local fonts in .fonts directory
+xset +fp /usr/share/fonts &
 xset +fp /usr/share/fonts/local &
 xset +fp /usr/share/fonts/misc &
 xset +fp ~/.fonts &
@@ -48,7 +49,7 @@ xcape -e 'Super_L=Super_L|Shift_L|space' &
 ## Gnome keyring
 gnome-keyring-daemon &
 thunar --daemon &
-/usr/lib/mate-notification-daemon/mate-notification-daemon &
+## /usr/lib/mate-notification-daemon/mate-notification-daemon &
 ## Welcome message
 ## sleep 1 && notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" &
 nm-applet &
