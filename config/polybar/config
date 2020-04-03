@@ -34,7 +34,7 @@ monitor = ${env:MONITOR:}
 ; Dimension defined as pixel value (e.g. 35) or percentage (e.g. 50%),
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in a width or height of 50% minus 10 pixels
-width = 100%:-30
+width = 100%:-20
 height = ${env:PANEL_HEIGHT:24}
 bottom = false
 ; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
@@ -53,7 +53,7 @@ foreground = ${colors.foreground}
 line-size = 0
 ; line-color = #eee
 
-border-size = 4
+border-size = ${env:PANEL_BORDER_SIZE:4}
 border-color = ${colors.background}
 border-transparent = false
 

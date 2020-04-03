@@ -1,6 +1,5 @@
 #!/bin/sh
 
-BORDER_SIZE=0  # border size from your wm settings
 YAD_WIDTH=222  # 222 is minimum possible value
 YAD_HEIGHT=193 # 193 is minimum possible value
 DATE="$(date +"%a %d %b %Y")"
@@ -26,9 +25,9 @@ case "$1" in
 
     # Y
     if [ "$Y" -gt "$((HEIGHT / 2))" ]; then #Bottom
-        : $((pos_y = HEIGHT - YAD_HEIGHT - PANEL_HEIGHT - BORDER_SIZE))
+        : $((pos_y = HEIGHT - YAD_HEIGHT - PANEL_HEIGHT + 2*PANEL_TOP_MARGIN - BORDER_SIZE))
     else #Top
-        : $((pos_y = PANEL_HEIGHT + BORDER_SIZE))
+        : $((pos_y = PANEL_HEIGHT + 2*PANEL_TOP_MARGIN + BORDER_SIZE))
     fi
 
     yad --calendar --show-weeks --undecorated --fixed --close-on-unfocus --no-buttons \

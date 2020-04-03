@@ -2,8 +2,8 @@
 . "${HOME}/.cache/wal/colors.sh" # source the colors.
 
 #This creates negative padding equal to window gap so that gaps are shown only between windows and not on desktop edges
-bspc config window_gap $GAP;
-bspc config top_padding $((PANEL_HEIGHT+PANEL_TOP_MARGIN))
+bspc config window_gap $GAP
+bspc config top_padding $((PANEL_HEIGHT+2*PANEL_TOP_MARGIN+2*PANEL_BORDER_SIZE-GAP))
 bspc config left_padding 0
 bspc config right_padding 0
 bspc config bottom_padding 0
@@ -26,7 +26,7 @@ bspc config normal_border_color "$color0"
 #"#000000"
 bspc config presel_feedback_color "#1ABB9B"
 #"#8F3724"
-bspc config border_width 2
+bspc config border_width $BORDER_SIZE
 
 bspc config focus_follows_pointer false
 #bspc config pointer_follows_focus true #Some keybindings automatically enable and disable this setting
