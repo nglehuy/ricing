@@ -4,7 +4,7 @@ configuration {
 /*	lines: 15;*/
 /*	columns: 1;*/
 	font: "CodeNewRoman Nerd Font 18";
-/*	bw: 1;*/
+/*	bw: 9;*/
 /*	location: 0;*/
 /*	padding: 5;*/
 /*	yoffset: 0;*/
