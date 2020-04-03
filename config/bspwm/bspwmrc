@@ -115,7 +115,3 @@ bspc config external_rules_command /usr/bin/pseudo_automatic_mode
 #   sed -i 's/"xrender"/"glx"/' ~/.config/compton.conf
 #   grep -q 'vsync = "opengl-swc";' ~/.config/compton.conf || echo 'vsync = "opengl-swc";' >> ~/.config/compton.conf
 # fi
-# POLYBAR
-~/.config/polybar/launch.sh &
-## PYWAL
-wal --theme ~/.config/colorschemes/base16-onedark.json

@@ -197,4 +197,3 @@ prompt spaceship
 
 # yarn
 export PATH="$PATH:$(yarn global bin)"
-export TERMINAL=/usr/bin/kitty
