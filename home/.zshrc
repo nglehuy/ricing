@@ -112,17 +112,21 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 # SPACESHIP_CHAR_SYMBOL="  "
 # SPACESHIP_CHAR_SYMBOL="  "
 # SPACESHIP_CHAR_SYMBOL="  "
-SPACESHIP_CHAR_SYMBOL="$ "
+SPACESHIP_CHAR_SYMBOL="$"
 SPACESHIP_USER_SHOW="always"
 SPACESHIP_USER_COLOR="magenta"
+SPACESHIP_GIT_BRANCH_COLOR="green"
 SPACESHIP_TIME_SHOW="true"
 SPACESHIP_DIR_TRUNC=0
 SPACESHIP_DIR_TRUNC_REPO=false
-SPACESHIP_PYENV_SYMBOL="pyenv "
+#SPACESHIP_PYENV_SYMBOL="pyenv "
+SPACESHIP_PROMPT_SEPARATE_LINE=true
+SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_PROMPT_ORDER=(
   user        # Username section
   dir         # Current directory section
   host        # Hostname section
+  git         # Git section (git_branch + git_status)
   hg          # Mercurial section (hg_branch  + hg_status)
   package     # Package version
   node        # Node.js section
@@ -153,7 +157,6 @@ SPACESHIP_PROMPT_ORDER=(
   char        # Prompt character
 )
 SPACESHIP_RPROMPT_ORDER=(
-  git # Git section (git_branch + git_status)
   time
 )
 
@@ -183,6 +186,9 @@ eval "$(pyenv init -)"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# yarn
+export PATH="$PATH:$(yarn global bin)"
+
 # Set Spaceship ZSH as a prompt
 fpath=($fpath "$HOME/.zfunctions")
 autoload -U promptinit
@@ -195,5 +201,3 @@ prompt spaceship
 #     [[ -z "$TMUX" ]] && exec tmux
 # fi
 
-# yarn
-export PATH="$PATH:$(yarn global bin)"
