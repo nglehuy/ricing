@@ -52,5 +52,12 @@ thunar --daemon &
 ## /usr/lib/mate-notification-daemon/mate-notification-daemon &
 ## Welcome message
 ## sleep 1 && notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" &
-nm-applet &
-blueman-applet &
+
+## Network Manager applet
+killall -q nm-applet
+while pgrep -u $UID -x nm-applet >/dev/null; do sleep 1; done
+nm-applet && notify-send "Network Manager Applet Started"
+## BLUEMAN
+killall -q blueman-applet
+while pgrep -u $UID -x blueman-applet >/dev/null; do sleep 1; done
+blueman-applet && notify-send "Blueman Applet Started"

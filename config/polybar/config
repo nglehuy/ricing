@@ -63,11 +63,15 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-locale = en_US.UTF-8
-
 font-0 = CodeNewRoman Nerd Font:style=Bold:pixelsize=12;3.5
-font-1 = FontAwesome5Free:style=Solid:pixelsize=11;3
-font-2 = FontAwesome5Brands:style=Solid:pixelsize=11;3
+font-1 = NotoSans:style=Regular:pixelsize=12;3.5
+font-2 = FontAwesome5Free:style=Solid:pixelsize=11;3
+font-3 = FontAwesome5Brands:style=Solid:pixelsize=11;3
+font-4 = NotoSansCJK KR:style=Regular:pixelsize=12;3.5
+font-5 = NotoSansCJK HK:style=Regular:pixelsize=12;3.5
+font-6 = NotoSansCJK JP:style=Regular:pixelsize=12;3.5
+font-7 = NotoSansCJK SC:style=Regular:pixelsize=12;3.5
+font-8 = NotoSansCJK TC:style=Regular:pixelsize=12;3.5
 
 modules-left = powermenu cpu memory filesystem temperature xwindow
 modules-center = bspwm
@@ -111,7 +115,7 @@ label-background = ${colors.background-alt}
 label-foreground = ${colors.foreground}
 
 format-prefix = ""
-format-prefix-font = 2
+format-prefix-font = 3
 format-prefix-padding = ${settings.padding}
 format-prefix-foreground = ${colors.background}
 format-prefix-background = ${colors.yellow}
@@ -141,7 +145,7 @@ interval = 25
 mount-0 = /
 
 format-mounted-prefix = ""
-format-mounted-prefix-font = 2
+format-mounted-prefix-font = 3
 format-mounted-prefix-padding = ${settings.padding}
 format-mounted-prefix-background = ${colors.purple}
 format-mounted-prefix-foreground = ${colors.background}
@@ -152,7 +156,7 @@ label-mounted-background = ${colors.background-alt}
 label-mounted-padding = ${settings.padding}
 
 format-unmounted-prefix = ""
-format-unmounted-prefix-font = 2
+format-unmounted-prefix-font = 3
 format-unmounted-prefix-padding = ${settings.padding}
 format-unmounted-prefix-background = ${colors.red}
 format-unmounted-prefix-foreground = ${colors.background}
@@ -170,25 +174,21 @@ pin-workspaces = true
 format = <label-state>
 
 label-focused = %index%
-label-focused-font = 2
 label-focused-foreground = ${colors.background}
 label-focused-background = ${colors.blue}
 label-focused-padding = ${settings.padding}
 
 label-occupied = %index%
-label-occupied-font = 2
 label-occupied-foreground = ${colors.background}
 label-occupied-background= ${colors.green}
 label-occupied-padding = ${settings.padding}
 
 label-urgent = %index%
-label-urgent-font = 2
 label-urgent-foreground = ${colors.background}
 label-urgent-background = ${colors.red}
 label-urgent-padding = ${settings.padding}
 
 label-empty = %index%
-label-empty-font = 2
 label-empty-foreground = ${colors.foreground}
 label-empty-background = ${colors.background-alt}
 label-empty-padding = ${settings.padding}
@@ -265,7 +265,7 @@ type = internal/xbacklight
 ; format = <label>  <bar>
 format = <label>
 format-prefix = ""
-format-prefix-font = 2
+format-prefix-font = 3
 format-prefix-background = ${colors.aqua}
 format-prefix-foreground = ${colors.background}
 format-prefix-padding = ${settings.padding}
@@ -296,7 +296,7 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = ""
-format-prefix-font = 2
+format-prefix-font = 3
 format-prefix-foreground = ${colors.background}
 format-prefix-background = ${colors.green}
 format-prefix-padding = ${settings.padding}
@@ -310,7 +310,7 @@ label-background = ${colors.background-alt}
 type = internal/memory
 interval = 2
 format-prefix = ""
-format-prefix-font = 2
+format-prefix-font = 3
 format-prefix-foreground = ${colors.background}
 format-prefix-background = ${colors.blue}
 format-prefix-padding = ${settings.padding}
@@ -326,7 +326,7 @@ interface = wlp3s0
 interval = 3.0
 
 format-connected-prefix = ""
-format-connected-font = 2
+format-connected-font = 3
 format-connected-prefix-foreground = ${colors.background}
 format-connected-prefix-background = ${colors.purple}
 format-connected-prefix-padding = ${settings.padding}
@@ -337,7 +337,7 @@ label-connected-background = ${colors.background-alt}
 label-connected-padding = ${settings.padding}
 
 format-disconnected-prefix = ""
-format-disconnected-font = 2
+format-disconnected-font = 3
 format-disconnected = <label-disconnected>
 format-disconnected-prefix-foreground = ${colors.background}
 format-disconnected-prefix-background = ${colors.purple}
@@ -360,7 +360,7 @@ interface = enp2s0
 interval = 3.0
 
 format-connected = ""
-format-connected-font = 2
+format-connected-font = 3
 format-connected-foreground = ${colors.background}
 format-connected-background = ${colors.aqua}
 format-connected-padding = ${settings.padding}
@@ -374,7 +374,7 @@ click-left = ~/.config/polybar/calendar.sh --popup
 format = <label>
 
 format-prefix = ""
-format-prefix-font = 2
+format-prefix-font = 3
 format-prefix-padding = ${settings.padding}
 format-prefix-foreground = ${colors.background}
 format-prefix-background = ${colors.blue}
@@ -403,7 +403,7 @@ interval = 5
 time = %I:%M %p
 
 format-prefix = ""
-format-prefix-font = 2
+format-prefix-font = 3
 format-prefix-padding = ${settings.padding}
 format-prefix-foreground = ${colors.background}
 format-prefix-background = ${colors.green}
@@ -423,12 +423,12 @@ label-volume-background = ${colors.background-alt}
 label-volume-padding = ${settings.padding}
 
 format-muted = 
-format-muted-font = 2
+format-muted-font = 3
 format-muted-foreground = ${colors.background}
 format-muted-background = ${colors.yellow}
 format-muted-padding = ${settings.padding}
 
-ramp-volume-font = 2
+ramp-volume-font = 3
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
@@ -472,12 +472,12 @@ label-volume-background = ${colors.background-alt}
 label-volume-padding = ${settings.padding}
 
 format-muted = 
-format-muted-font = 2
+format-muted-font = 3
 format-muted-foreground = ${colors.background}
 format-muted-background = ${colors.yellow}
 format-muted-padding = ${settings.padding}
 
-ramp-volume-font = 2
+ramp-volume-font = 3
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
@@ -516,7 +516,7 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-font = 2
+ramp-capacity-font = 3
 ramp-capacity-foreground = ${colors.background}
 ramp-capacity-background = ${colors.purple}
 ramp-capacity-padding = ${settings.padding}
@@ -526,7 +526,7 @@ animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-font = 2
+animation-charging-font = 3
 animation-charging-foreground = ${colors.background}
 animation-charging-background = ${colors.purple}
 animation-charging-padding = ${settings.padding}
@@ -535,7 +535,7 @@ animation-charging-framerate = 750
 animation-discharging-0 = 
 animation-discharging-1 = 
 animation-discharging-2 = 
-animation-discharging-font = 2
+animation-discharging-font = 3
 animation-discharging-foreground = ${colors.background}
 animation-discharging-background = ${colors.purple}
 animation-discharging-padding = ${settings.padding}
@@ -565,7 +565,7 @@ label-warn-padding = ${settings.padding}
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-font = 2
+ramp-font = 3
 ramp-foreground = ${colors.background}
 ramp-background = ${colors.aqua}
 ramp-padding = ${settings.padding}
@@ -588,7 +588,7 @@ menu-0-3-exec = bspc quit 1 && killall -q polybar
 
 ; label-open = 
 label-open = ""
-label-open-font = 2
+label-open-font = 3
 label-open-foreground = ${colors.background}
 label-open-background = ${colors.red}
 label-open-padding = ${settings.padding}
