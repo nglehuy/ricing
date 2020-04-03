@@ -14,6 +14,7 @@ export BROWSER=/usr/bin/google-chrome-stable
 export TERMINAL=/usr/bin/kitty
 export PANEL_HEIGHT=24
 export PANEL_TOP_MARGIN=5
+export GAP=15
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export EDITOR=/usr/bin/nvim
 export VISUAL="/usr/bin/ranger --selectfile"
