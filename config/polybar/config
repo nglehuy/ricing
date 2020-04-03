@@ -575,11 +575,18 @@ type = custom/script
 exec = ~/.config/polybar/powermenu.sh
 click-left = ~/.config/polybar/powermenu.sh --popup
 
-format = ""
-format-font = 3
-format-padding = ${settings.padding}
-format-foreground = ${colors.background}
-format-background = ${colors.red}
+format = <label>
+
+format-prefix = ""
+format-prefix-font = 3
+format-prefix-padding = ${settings.padding}
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.red}
+
+label = Power
+label-padding = ${settings.padding}
+label-background = ${colors.background-alt}
+label-foreground = ${colors.foreground}
 
 
 [settings]
