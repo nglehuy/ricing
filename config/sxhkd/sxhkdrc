@@ -253,7 +253,7 @@ mod1 + @button1
 
 # Triggered by jus tapping super 
 super + shift + space
-	rofi -show
+	rofi -show drun
 
 #super + p
 #	dmenu_recent -h $PANEL_HEIGHT -fn 'xos4 Terminus:size=15' -i
