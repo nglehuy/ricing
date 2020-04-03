@@ -61,3 +61,5 @@ nm-applet && notify-send "Network Manager Applet Started"
 killall -q blueman-applet
 while pgrep -u $UID -x blueman-applet >/dev/null; do sleep 1; done
 blueman-applet && notify-send "Blueman Applet Started"
+## IBUS
+ibus-daemon -drx

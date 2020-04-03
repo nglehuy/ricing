@@ -36,3 +36,8 @@ unset TERMCAP
 
 # Man is much better than us at figuring this out
 unset MANPATH
+
+# IBUS
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
