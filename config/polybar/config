@@ -73,7 +73,7 @@ font-6 = NotoSansCJK JP:style=Regular:pixelsize=12;3.5
 font-7 = NotoSansCJK SC:style=Regular:pixelsize=12;3.5
 font-8 = NotoSansCJK TC:style=Regular:pixelsize=12;3.5
 
-modules-left = powermenu cpu memory filesystem temperature xwindow
+modules-left = powermenu cpu memory filesystem xwindow
 modules-center = bspwm
 modules-right = xbacklight alsa battery calendar time
 
