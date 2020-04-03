@@ -35,14 +35,14 @@ monitor = ${env:MONITOR:}
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in a width or height of 50% minus 10 pixels
 width = 100%:-30
-height = 22
+height = ${env:PANEL_HEIGHT:24}
 bottom = false
 ; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in an offset in the x or y direction 
 ; of 50% minus 10 pixels
-offset-x = 15
-offset-y = 5
+offset-x = ${env:GAP:15}
+offset-y = ${env:PANEL_TOP_MARGIN:5}
 radius = 0
 fixed-center = true
 dim-value = 0.9
@@ -82,7 +82,7 @@ tray-padding = 6
 tray-detached = false
 tray-offset-x = 0
 tray-offset-y = 0
-tray-maxsize = 16
+tray-maxsize = 24
 tray-scale = 1.0
 tray-transparent = true
 
@@ -546,7 +546,7 @@ type = internal/temperature
 thermal-zone = 0
 base-temperature = 45
 warn-temperature = 70
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp2_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input
 interval = 1
 
 format = <ramp><label>
