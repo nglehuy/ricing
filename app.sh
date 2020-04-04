@@ -9,6 +9,9 @@ sudo pacman -Syu --noconfirm --needed discord chromium snapd dunst \
   noto-fonts noto-fonts-extra noto-fonts-cjk noto-fonts-emoji \
   code
 
+eval "$(pyenv init -)"
+pyenv shell system
+
 yay -Syu --needed slack-desktop shutter perl-goo-canvas ibus-bamboo \
   anydesk-bin themix-full-git otf-code-new-roman ttf-quicksand
 
