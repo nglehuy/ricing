@@ -295,10 +295,10 @@ XF86AudioMute
 	amixer sset Master toggle
 	
 XF86MonBrightnessDown
-  light -U 1 
+  light -U 5 
 
 XF86MonBrightnessUp
-  light -A 1
+  light -A 5
  
 
 XF86Sleep
