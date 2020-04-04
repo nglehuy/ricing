@@ -278,10 +278,10 @@ super + shift + e
 	nautilus
 
 Print
-	shutter -C -f -n --min_at_startup --disable_systray
+	shutter -C -f --min_at_startup --disable_systray
 
 shift + Print
-  shutter -C -s -n --min_at_startup --disable_systray
+  shutter -C -s --min_at_startup --disable_systray
 
 	
 #

@@ -10,7 +10,6 @@ export PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
-export BROWSER=/usr/bin/google-chrome-stable
 export TERMINAL=/usr/bin/kitty
 export PANEL_HEIGHT=24
 export PANEL_TOP_MARGIN=5

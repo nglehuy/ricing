@@ -3,19 +3,15 @@ cd $HOME
 
 echo "Installing development tools ..."
 sudo pacman -Syu --noconfirm --needed gcc go ruby git make cmake openssh wget curl fzf \
-    p7zip unrar unzip zip unarchiver bzip2 gzip lrzip lz4 lzip lzop xz tar \
-    base-devel openssl zlib readline sqlite llvm ncurses xz tk python-pyopenssl libffi \
-    python python-pip python2 python2-pip pyenv \
-    vim neovim zsh \
-    nodejs yarn npm \
-    jdk-openjdk jre-openjdk maven \
-    texlive-core texlive-lang ffmpeg \
-    boost swig sox \
-    neofetch
-
-echo "Installing apps ..."
-sudo pacman -Syu --noconfirm --needed discord chromium snapd dunst nm-applet \
-    blueman
+  p7zip unrar unzip zip unarchiver bzip2 gzip lrzip lz4 lzip lzop xz tar \
+  base-devel openssl zlib readline sqlite llvm ncurses xz tk python-pyopenssl libffi \
+  python python-pip python2 python2-pip pyenv \
+  vim neovim zsh \
+  nodejs yarn npm \
+  jdk-openjdk jre-openjdk maven \
+  texlive-core texlive-lang ffmpeg \
+  boost swig sox \
+  neofetch htop xdotool xclip xset
 
 echo "Installing vim-plug ..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
