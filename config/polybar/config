@@ -82,7 +82,7 @@ tray-padding = 6
 tray-detached = false
 tray-offset-x = 0
 tray-offset-y = 0
-tray-maxsize = 24
+tray-maxsize = 16
 tray-scale = 1.0
 
 override-redirect = true

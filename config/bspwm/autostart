@@ -62,7 +62,7 @@ nm-applet &
 killall -q blueman-applet
 while pgrep -u $UID -x blueman-applet >/dev/null; do sleep 1; done
 blueman-applet &
-## IBUS
-ibus-daemon -drx &
 ## PYWAL
 wal --theme base16-onedark &
+## IBUS
+sleep 1 && ibus-daemon -drx &

@@ -286,19 +286,19 @@ Print
 #
 
 XF86AudioRaiseVolume
-	volume up
+	amixer sset Master 655.36+
 
 XF86AudioLowerVolume
-	volume down
+	amixer sset Master 655.36-
 
 XF86AudioMute
-	volume mute
+	amixer sset Master toggle
 	
 XF86MonBrightnessDown
- light -U 5 
+  light -U 1 
 
 XF86MonBrightnessUp
- light -A 5
+  light -A 1
  
 
 XF86Sleep
