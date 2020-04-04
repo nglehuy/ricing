@@ -1,99 +1,79 @@
-" call plug#begin('~/.vim/plugged')
-" 
-" " Plug 'mattn/emmet-vim'
-" 
-" " Plug 'w0rp/ale'
-" 
-" " if has('nvim')
-" "   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" " else
-" "   Plug 'Shougo/deoplete.nvim'
-" "   Plug 'roxma/nvim-yarp'
-" "   Plug 'roxma/vim-hug-neovim-rpc'
-" " endif
-" 
-" call plug#end()
-
-" Vundle
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin('~/.vim/vundle')
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
+call plug#begin('~/.vim/plugged')
 " Ale
-Plugin 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 
 " Brings physics-based smooth scrolling to the Vim/Neovim world!
-Plugin 'yuttie/comfortable-motion.vim'
+Plug 'yuttie/comfortable-motion.vim'
 
 " Insert or delete brackets, parens, quotes in pair.
-Plugin 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 " Show difference in code by using a sign column
-Plugin 'mhinz/vim-signify'
-Plugin 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
+Plug 'airblade/vim-gitgutter'
 
 " For indentation
-Plugin 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 
 " Rainbow
-Plugin 'luochen1990/rainbow'
+Plug 'luochen1990/rainbow'
 
 " Clang Format
-Plugin 'rhysd/vim-clang-format'
+Plug 'rhysd/vim-clang-format'
 
 " Vim auto closed tag
-Plugin 'alvan/vim-closetag'
+Plug 'alvan/vim-closetag'
 
 " Vaffle
-Plugin 'cocopon/vaffle.vim'
+Plug 'cocopon/vaffle.vim'
 
 " Markdown
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 " COC 
-Plugin 'neoclide/coc.nvim', {'branch': 'release', 'do': { -> coc#util#install() }}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':call coc#util#install()' }
 
 " Python formatter
-Plugin 'tell-k/vim-autopep8'
+Plug 'tell-k/vim-autopep8'
 
 " OPERATOR TO SURROUND A TEXT OBJECT
-Plugin 'kana/vim-operator-user'
-Plugin 'rhysd/vim-operator-surround'
+Plug 'kana/vim-operator-user'
+Plug 'rhysd/vim-operator-surround'
 
 " MARKDOWN PREVIEW FOR (NEO)VIM
-Plugin 'iamcco/markdown-preview.nvim'
+Plug 'iamcco/markdown-preview.nvim'
 
 " Prettier formatter for javascript
-Plugin 'prettier/vim-prettier'
+Plug 'prettier/vim-prettier'
 
 " Csv file
-Plugin 'chrisbra/csv.vim'
+Plug 'chrisbra/csv.vim'
 
 " Syntax++
-Plugin 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot'
 
 " fuzzy finder
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 " Comment
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " Themes
-Plugin 'morhetz/gruvbox'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'phanviet/vim-monokai-pro'
-Plugin 'joshdick/onedark.vim'
-Plugin 'dylanaraps/wal.vim'
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'phanviet/vim-monokai-pro'
+Plug 'joshdick/onedark.vim'
+Plug 'dylanaraps/wal.vim'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()
+
 filetype plugin indent on    " required
 
 " deoplete

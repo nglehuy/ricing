@@ -187,6 +187,9 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # yarn
 export PATH="$PATH:$(yarn global bin)"
 
+# Ruby
+export PATH="$PATH:$(gem env gempath)"
+
 # Set Spaceship ZSH as a prompt
 fpath=($fpath "$HOME/.zfunctions")
 autoload -U promptinit
