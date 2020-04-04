@@ -15,7 +15,7 @@ case "$1" in
       --field="Shutdown:FBTN" "systemctl poweroff" \
       --field="Hibernate:FBTN" "systemctl hibernate" \
       --field="Suspend:FBTN" "systemctl suspend" \
-      --field="Logout:FBTN" "bspc quit 1" \
+      --field="Logout:FBTN" "bspc quit" \
       >/dev/null &
     ;;
 *)
