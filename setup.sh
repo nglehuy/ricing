@@ -1,3 +1,7 @@
-#!/usr/env/bin sh
+#!/usr/bin/env sh
 
+echo "Linking home directory ..."
+cp -l -f -T -r $PWD/home $HOME
 
+echo "Linking .config directory ..."
+cp -l -f -T -r $PWD/config $XDG_CONFIG_HOME
