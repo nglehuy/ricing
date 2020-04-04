@@ -80,6 +80,7 @@ bspc rule -a '*:soffice' state=tiled
 #bspc rule -a deluge desktop=III
 bspc rule -a 9menu border=off manage=off
 bspc rule -a tint2 border=off manage=off
+bspc rule -a '*:shutter' state=floating center=true
 #bspc desktop I --layout monocle
 #bspc desktop II --layout monocle
 
