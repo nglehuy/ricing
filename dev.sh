@@ -18,7 +18,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 echo "Setting up yarn ..."
-yarn global add spaceship-prompt coffeescript typescript react react-cli create-react-app react-native react-native-cli neovim
+yarn global add spaceship-prompt neovim
 gem install neovim
 
 echo "Setting up npm ..."
@@ -30,7 +30,7 @@ eval "$(pyenv init -)"
 pyenv install 3.7.7
 pyenv install 2.7.17
 pyenv shell 2.7.17 && pip install neovim
-pyenv shell 3.7.7 && pip install neovim pylint autopep8 tensorflow flask flask-cors flask-socketio python-dotenv nltk pandas sox soundfile absl-py librosa tensorflow-addons matplotlib torch
+pyenv shell 3.7.7 && pip install neovim pylint autopep8
 pyenv global 3.7.7
 
 echo "Setting up zsh ..."
