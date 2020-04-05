@@ -6,6 +6,9 @@ cp -l -f -T -r $PWD/home $HOME
 echo "Linking .config directory ..."
 cp -l -f -T -r $PWD/config $XDG_CONFIG_HOME
 
+echo "Linking /root directory ..."
+sudo cp -l -f -T -r $PWD/home /root
+
 echo "Linking /root/.config directory ..."
 sudo cp -l -f -T -r $PWD/config /root/.config
 
