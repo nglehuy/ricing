@@ -52,8 +52,6 @@ thunar --daemon &
 ## /usr/lib/mate-notification-daemon/mate-notification-daemon &
 ## Welcome message
 ## sleep 1 && notify-send "Welcome to Manjaro-bspwm! " "Press super + F1 to show keybindings" &
-## POLYBAR
-~/.config/polybar/launch.sh &
 ## Network Manager applet
 killall -q nm-applet
 while pgrep -u $UID -x nm-applet >/dev/null; do sleep 1; done
@@ -65,4 +63,4 @@ blueman-applet &
 ## PYWAL
 wal --theme base16-onedark &
 ## IBUS
-sleep 1 && ibus-daemon -drx &
+ibus-daemon -drx &

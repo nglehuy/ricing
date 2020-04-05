@@ -119,7 +119,11 @@ super + {m,n}
 
 # cycle windows
 alt + {_,shift + }Tab
-    bspc node -f {next,prev}
+  rofi -show window \
+    -selected-row 1 \
+    -kb-accept-entry "!Alt-Tab,!Alt+Alt_L" \
+    -kb-row-down "Alt+Tab" \
+    #bspc node -f {next,prev}
 
 # Go to specific window
 super + Tab
