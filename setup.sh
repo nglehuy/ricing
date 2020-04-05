@@ -6,11 +6,11 @@ cp -l -f -T -r $PWD/home $HOME
 echo "Linking .config directory ..."
 cp -l -f -T -r $PWD/config $XDG_CONFIG_HOME
 
-echo "Linking /root directory ..."
-sudo cp -l -f -T -r $PWD/home /root
+echo "Linking /root/.config/gtk-3.0 directory ..."
+sudo cp -l -f -T -r $PWD/config/gtk-3.0 /root/.config/gtk-3.0
 
-echo "Linking /root/.config directory ..."
-sudo cp -l -f -T -r $PWD/config /root/.config
+echo "Linking /root/.gtkrc-2.0 directory ..."
+sudo cp -l -f -T -r $PWD/home/.gtkrc-2.0 /root/.gtkrc-2.0
 
 echo "Linking /etc directory ..."
 sudo cp -l -f -T -r $PWD/etc /etc
