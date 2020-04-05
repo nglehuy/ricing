@@ -13,7 +13,7 @@ eval "$(pyenv init -)"
 pyenv shell system
 
 yay -Syu --needed slack-desktop shutter perl-goo-canvas ibus-bamboo \
-  anydesk-bin themix-full-git otf-code-new-roman ttf-quicksand
+  anydesk-bin oomox otf-code-new-roman ttf-quicksand
 
 echo "Setting up snapd ..."
 sudo systemctl enable --now snapd.socket
