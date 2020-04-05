@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/nlhuy/.config/wallpapers/kabaneri.png' 
+feh --no-fehbg --bg-scale '/usr/share/backgrounds/kabaneri.png' 
