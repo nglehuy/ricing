@@ -2,7 +2,7 @@
 
 YAD_WIDTH=222  # 222 is minimum possible value
 YAD_HEIGHT=193 # 193 is minimum possible value
-DATE="$(date +"%a %d %b %Y")"
+DATE="$(date +"%x")"
 
 case "$1" in
 --popup)

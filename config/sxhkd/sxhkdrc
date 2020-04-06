@@ -254,7 +254,7 @@ mod1 + @button1
 # run applications
 
 # Triggered by jus tapping super 
-super + shift + space
+super + a
 	rofi -show drun
 
 #super + p
