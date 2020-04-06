@@ -16,6 +16,7 @@ sudo pacman -Syu --noconfirm --needed gcc go ruby git make cmake openssh wget cu
 echo "Installing vim-plug ..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+mkdir ~/.swap-files
 
 echo "Setting up yarn ..."
 yarn global add spaceship-prompt neovim

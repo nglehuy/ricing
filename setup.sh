@@ -15,7 +15,11 @@ sudo cp -l -f -T -r $PWD/home/.gtkrc-2.0 /root/.gtkrc-2.0
 echo "Copying themes ..."
 sudo cp -rfT $PWD/themes /usr/share/themes
 
+echo "Copying fonts ..."
+sudo cp -rfT $PWD/fonts /usr/share/fonts
+
 echo "Copying backgrounds ..."
 sudo cp -rfT $PWD/backgrounds /usr/share/backgrounds
 
 wal --theme base16-onedark
+fc-cache -fv
