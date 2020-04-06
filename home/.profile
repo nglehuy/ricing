@@ -13,12 +13,14 @@ export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
 export TERMINAL=/usr/bin/kitty
 export PANEL_HEIGHT=24
 export PANEL_TOP_MARGIN=5
-export BORDER_SIZE=4
+export BORDER_SIZE=3
 export GAP=10
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export EDITOR=/usr/bin/nvim
 export VISUAL="/usr/bin/ranger --selectfile"
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+# Kitty to use ibus
+export GLFW_IM_MODULE=ibus
 
 # Load profiles from /etc/profile.d
 if test -d /etc/profile.d/; then
