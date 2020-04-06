@@ -1,13 +1,13 @@
 #!/usr/bin/env sh
 cd $HOME
 
-sudo pacman -Rs --noconfirm manjaro-hello
-sudo pacman -Rs $(pacman -Qnq | grep manjaro-gnome*)
-sudo pacman -Rs $(pacman -Qnq | grep gnome*)
-sudo pacman -Rs $(pacman -Qnq | grep maia)
+sudo pacman -Rcns --noconfirm manjaro-hello
+sudo pacman -Rcns $(pacman -Qnq | grep manjaro-gnome*)
+sudo pacman -Rcns $(pacman -Qnq | grep gnome*)
+sudo pacman -Rcns $(pacman -Qnq | grep maia)
 
 echo "Installing desktop apps ..."
-sudo pacman -Syu --noconfirm --needed  dunst \
+sudo pacman -Syu --needed  dunst pamac \
   network-manager-applet nm-connection-editor networkmanager \
   light \
   ranger \

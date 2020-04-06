@@ -17,3 +17,5 @@ sudo cp -rfT $PWD/themes /usr/share/themes
 
 echo "Copying backgrounds ..."
 sudo cp -rfT $PWD/backgrounds /usr/share/backgrounds
+
+wal --theme base16-onedark

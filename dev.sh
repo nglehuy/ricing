@@ -9,7 +9,7 @@ sudo pacman -Syu --noconfirm --needed gcc go ruby git make cmake openssh wget cu
   vim neovim zsh \
   nodejs yarn npm \
   jdk-openjdk jre-openjdk maven \
-  texlive-core texlive-lang ffmpeg \
+  ffmpeg \
   boost swig sox \
   neofetch htop xdotool xclip
 
