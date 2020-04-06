@@ -12,6 +12,6 @@ Colorschemes are managed by `pywal`.
 
 ### Screenshots
 
-![Screenshot](./images/scrot.png)
+![Screenshot](./images/desktop.png)
 
-![Screenshot Fake Busy](./images/scrot-busy.png)
+![Screenshot Fake Busy](./images/fake_busy.png)
