@@ -9,7 +9,7 @@ sudo pacman -Rcns $(pacman -Qnq | grep maia)
 echo "Installing desktop apps ..."
 sudo pacman -Syu --needed  dunst pamac \
   network-manager-applet nm-connection-editor networkmanager \
-  light \
+  light dex \
   ranger \
   feh \
   zathura polkit-gnome gnome \

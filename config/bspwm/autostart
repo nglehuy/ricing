@@ -66,3 +66,4 @@ ibus-daemon -drx &
 sxhkd &
 ## POLYBAR
 ~/.config/polybar/launch.sh &
+dex -a -s ~/.config/autostart/ &

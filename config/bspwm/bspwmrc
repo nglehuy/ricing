@@ -67,7 +67,6 @@ bspc rule -a dockbarx layer=above
 bspc rule -a google-chrome-unstable private=on
 bspc rule -a Google-chrome private=on desktop=일
 bspc rule -a Chromium private=on desktop=일
-bspc rule -a kitty private=on desktop=이
 bspc rule -a firefox private=on
 bspc rule -a midori private=on
 bspc rule -a gnome-pie border=off manage=off
@@ -82,6 +81,7 @@ bspc rule -a '*:soffice' state=tiled
 #bspc rule -a 9menu border=off manage=off
 #bspc rule -a tint2 border=off manage=off
 bspc rule -a '*:shutter' state=floating center=true
+bspc rule -a '*:eog' state=floating
 #bspc desktop I --layout monocle
 #bspc desktop II --layout monocle
 
