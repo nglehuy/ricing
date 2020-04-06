@@ -4,7 +4,7 @@
 include "/home/nlhuy/.gtkrc-2.0.mine"
 gtk-theme-name="oomox-onedark-numix"
 gtk-icon-theme-name="Papirus-Dark"
-gtk-font-name="CodeNewRoman 12"
+gtk-font-name="CodeNewRoman NF 12"
 gtk-cursor-theme-name="xcursor-breeze"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH_HORIZ

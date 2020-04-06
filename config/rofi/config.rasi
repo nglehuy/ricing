@@ -3,7 +3,7 @@ configuration {
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
-	font: "CodeNewRoman Bold 18";
+	font: "CodeNewRoman NF Bold 18";
 /*	bw: 9;*/
 /*	location: 0;*/
 /*	padding: 5;*/
