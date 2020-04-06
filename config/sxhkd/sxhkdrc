@@ -252,8 +252,6 @@ mod1 + @button1
 #
 
 # run applications
-# super + space
-# 	dmenu_recent -fn 'xos4 Terminus:size=15' -i -l 14 -w 600 -y $PANEL_HEIGHT
 
 # Triggered by jus tapping super 
 super + shift + space

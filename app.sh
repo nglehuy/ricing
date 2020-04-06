@@ -7,19 +7,16 @@ sudo pacman -Syu --noconfirm --needed  dunst \
   light \
   ranger \
   feh \
-  zathura \
-  xcursor-breeze \
-  blueman \
+  zathura polkit-gnome \
+  xcursor-breeze papirus-icon-theme \
+  blueman xorg-xsetroot \
   ibus ibus-hangul \
   ttf-font-awesome noto-fonts noto-fonts-extra noto-fonts-cjk noto-fonts-emoji \
-  yad rofi polybar picom bspwm sxhkd python-pywal \
+  yad rofi polybar picom bspwm bspwm-scripts sxhkd python-pywal \
   gnome-disk-utility yay
 
 echo "Installing desktop apps ..."
 sudo pacman -Syu --noconfirm --needed discord chromium snapd code docker kitty
-
-yay -Syu --needed slack-desktop shutter perl-goo-canvas ibus-bamboo \
-  anydesk-bin oomox otf-code-new-roman ttf-quicksand
 
 echo "Setting up snapd ..."
 sudo systemctl enable --now snapd.socket

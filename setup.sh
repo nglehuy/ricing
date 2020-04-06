@@ -4,7 +4,7 @@ echo "Linking home directory ..."
 cp -l -f -T -r $PWD/home $HOME
 
 echo "Linking .config directory ..."
-cp -l -f -T -r $PWD/config $XDG_CONFIG_HOME
+cp -l -f -T -r $PWD/config $HOME/.config
 
 echo "Linking /root/.config/gtk-3.0 directory ..."
 sudo cp -l -f -T -r $PWD/config/gtk-3.0 /root/.config/gtk-3.0
