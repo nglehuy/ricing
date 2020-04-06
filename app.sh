@@ -2,28 +2,24 @@
 cd $HOME
 
 echo "Installing desktop tools ..."
-sudo pacman -Syu --noconfirm --needed  dunst \ #notification
-  network-manager-applet nm-connection-editor network-manager \ # network manager
-  light \ # screen light controller
-  lightdm lightdm-slick-greeter light-locker \ # login and lock screen
-  thunar ranger \ # file manager
-  feh \ # background image setter
-  zathura \ # pdf viewer
-  xcursor-breeze \ # cursor theme
-  blueman \ # bluetooth manager
-  ibus ibus-hangul \ # input method
+sudo pacman -Syu --noconfirm --needed  dunst \
+  network-manager-applet nm-connection-editor networkmanager \
+  light \
+  ranger \
+  feh \
+  zathura \
+  xcursor-breeze \
+  blueman \
+  ibus ibus-hangul \
   ttf-font-awesome noto-fonts noto-fonts-extra noto-fonts-cjk noto-fonts-emoji \
-  yad rofi polybar picom bspwm sxhkd python-pywal \ # WM components
-  gnome-disk-utility \
+  yad rofi polybar picom bspwm sxhkd python-pywal \
+  gnome-disk-utility yay
 
 echo "Installing desktop apps ..."
-sudo pacman -Syu --noconfirm --needed discord chromium snapd code docker kitty \
-
-eval "$(pyenv init -)"
-pyenv shell system
+sudo pacman -Syu --noconfirm --needed discord chromium snapd code docker kitty
 
 yay -Syu --needed slack-desktop shutter perl-goo-canvas ibus-bamboo \
-  anydesk-bin oomox otf-code-new-roman ttf-quicksand evince-no-gnome
+  anydesk-bin oomox otf-code-new-roman ttf-quicksand
 
 echo "Setting up snapd ..."
 sudo systemctl enable --now snapd.socket

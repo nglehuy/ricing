@@ -11,7 +11,7 @@ sudo pacman -Syu --noconfirm --needed gcc go ruby git make cmake openssh wget cu
   jdk-openjdk jre-openjdk maven \
   texlive-core texlive-lang ffmpeg \
   boost swig sox \
-  neofetch htop xdotool xclip xset
+  neofetch htop xdotool xclip
 
 echo "Installing vim-plug ..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
