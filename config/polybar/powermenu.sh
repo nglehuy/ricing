@@ -15,7 +15,7 @@ case "$1" in
       --field="Shutdown:FBTN" "systemctl poweroff" \
       --field="Hibernate:FBTN" "systemctl hibernate" \
       --field="Suspend:FBTN" "systemctl suspend" \
-      --field="Logout:FBTN" "sh ~/.config/bspwm/close_bspwm" \
+      --field="Logout:FBTN" "$HOME/.config/bspwm/close_bspwm" \
       >/dev/null &
     ;;
 *)

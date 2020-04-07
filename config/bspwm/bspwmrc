@@ -80,12 +80,13 @@ bspc rule -a '*:shutter' state=floating center=true
 bspc rule -a '*:eog' state=floating
 #bspc desktop I --layout monocle
 #bspc desktop II --layout monocle
-bspc rule -a Spotify desktop=십
 bspc rule -a Postman desktop=구
 bspc rule -a Google-chrome desktop=일
 bspc rule -a Chromium desktop=일
 bspc rule -a Slack desktop=팔
 bspc rule -a Skype desktop=칠
+# Pycharm
+bspc config wm_name LG3D
 
 ##  Autogap adjusts windowgap automatically according to the number of
 ##  windows on the desktop. Using it disables negative window gap.
