@@ -20,7 +20,8 @@ sudo pacman -Syu --needed  dunst pamac \
   ttf-roboto \
   yad rofi polybar picom bspwm bspwm-scripts sxhkd python-pywal \
   gnome-disk-utility yay \
-  discord chromium snapd code docker kitty
+  discord chromium snapd code docker kitty \
+  based-devel
 
 echo "Setting up snapd ..."
 sudo systemctl enable --now snapd.socket
