@@ -82,6 +82,7 @@ bspc rule -a '*:soffice' state=tiled
 #bspc rule -a tint2 border=off manage=off
 bspc rule -a '*:shutter' state=floating center=true
 bspc rule -a '*:eog' state=floating
+bspc rule -a '*:Spotify' state=floating
 #bspc desktop I --layout monocle
 #bspc desktop II --layout monocle
 
