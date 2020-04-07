@@ -79,6 +79,7 @@ bspc rule -a '*:soffice' state=tiled
 bspc rule -a '*:shutter' state=floating center=true
 bspc rule -a '*:eog' state=floating
 bspc rule -a Gnome-disks state=floating
+bspc rule -a discord state=floating center=true
 #bspc desktop I --layout monocle
 #bspc desktop II --layout monocle
 bspc rule -a Postman desktop=구

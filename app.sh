@@ -12,7 +12,7 @@ sudo pacman -Syu --needed  dunst pamac \
   light dex \
   ranger \
   feh \
-  zathura polkit-gnome gnome \
+  zathura polkit-gnome gnome gnome-screensaver \
   xcursor-breeze papirus-icon-theme \
   blueman xorg-xsetroot \
   ibus ibus-hangul \
