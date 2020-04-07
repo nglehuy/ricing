@@ -54,7 +54,6 @@ bspc rule -a file-roller state=floating center=true
 bspc rule -a floaterm state=floating center=true
 #bspc rule -a spotify state=pseudo_tiled
 #bspc rule -a nautilus state=pseudo_tiled
-#bspc rule -a skype state=pseudo_tiled
 #bspc rule -a file-roller state=pseudo_tiled
 #bspc rule -a transmission-gtk state=pseudo_tiled
 bspc rule -a conky sticky=on manage=off lower=on
@@ -64,11 +63,8 @@ bspc rule -a Docky layer=above border=off manage=on
 bspc rule -a Plank layer=above border=off manage=on
 bspc rule -a wbar layer=above
 bspc rule -a dockbarx layer=above
-bspc rule -a google-chrome-unstable private=on
-bspc rule -a Google-chrome private=on desktop=일
-bspc rule -a Chromium private=on desktop=일
-bspc rule -a firefox private=on
-bspc rule -a midori private=on
+#bspc rule -a firefox 
+#bspc rule -a midori 
 bspc rule -a gnome-pie border=off manage=off
 #bspc rule -a wpa_gui state=pseudo_tiled
 bspc rule -a libreoffice state=tiled
@@ -82,10 +78,14 @@ bspc rule -a '*:soffice' state=tiled
 #bspc rule -a tint2 border=off manage=off
 bspc rule -a '*:shutter' state=floating center=true
 bspc rule -a '*:eog' state=floating
-bspc rule -a '*:Spotify' state=floating
 #bspc desktop I --layout monocle
 #bspc desktop II --layout monocle
-
+bspc rule -a Spotify desktop=십
+bspc rule -a Postman desktop=구
+bspc rule -a Google-chrome desktop=일
+bspc rule -a Chromium desktop=일
+bspc rule -a Slack desktop=팔
+bspc rule -a Skype desktop=칠
 
 ##  Autogap adjusts windowgap automatically according to the number of
 ##  windows on the desktop. Using it disables negative window gap.
