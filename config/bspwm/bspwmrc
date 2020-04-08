@@ -80,6 +80,7 @@ bspc rule -a '*:shutter' state=floating center=true
 bspc rule -a '*:eog' state=floating
 bspc rule -a Gnome-disks state=floating
 bspc rule -a Nm-connection-editor state=floating
+bspc rule -a Gnome-terminal state=floating
 bspc rule -a discord state=floating center=true
 #bspc desktop I --layout monocle
 #bspc desktop II --layout monocle

@@ -474,7 +474,7 @@ label-volume-padding = ${settings.padding}
 format-muted = 
 format-muted-font = 3
 format-muted-foreground = ${colors.background}
-format-muted-background = ${colors.aqua}
+format-muted-background = ${colors.yellow}
 format-muted-padding = 2
 
 ramp-volume-font = 3
@@ -482,7 +482,7 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-volume-foreground = ${colors.background}
-ramp-volume-background = ${colors.aqua}
+ramp-volume-background = ${colors.yellow}
 ramp-volume-padding = ${settings.padding}
 
 ramp-headphones-0 = 
