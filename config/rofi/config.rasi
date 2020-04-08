@@ -1,9 +1,9 @@
 configuration {
 	modi: "window,run,drun";
 /*	width: 50;*/
-/*	lines: 15;*/
+	lines: 10;
 /*	columns: 1;*/
-	font: "Quicksand Bold 16";
+	font: "Noto Sans Mono Bold 16";
 /*	bw: 9;*/
 /*	location: 0;*/
 /*	padding: 5;*/
@@ -43,7 +43,7 @@ configuration {
 /*	filter: ;*/
 /*	separator-style: "dash";*/
 /*	hide-scrollbar: false;*/
-/*	fullscreen: false;*/
+	fullscreen: false;
 /*	fake-transparency: false;*/
 /*	dpi: -1;*/
 /*	threads: 0;*/

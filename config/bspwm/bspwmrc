@@ -79,6 +79,7 @@ bspc rule -a '*:soffice' state=tiled
 bspc rule -a '*:shutter' state=floating center=true
 bspc rule -a '*:eog' state=floating
 bspc rule -a Gnome-disks state=floating
+bspc rule -a Nm-connection-editor state=floating
 bspc rule -a discord state=floating center=true
 #bspc desktop I --layout monocle
 #bspc desktop II --layout monocle
@@ -90,6 +91,7 @@ bspc rule -a Skype desktop=칠
 bspc rule -a jetbrains-pycharm desktop=오
 bspc rule -a jetbrains-idea desktop=육
 bspc rule -a Anydesk desktop=십
+bspc rule -a GitKraken desktop=사
 
 ##  Autogap adjusts windowgap automatically according to the number of
 ##  windows on the desktop. Using it disables negative window gap.

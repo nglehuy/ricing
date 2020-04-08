@@ -74,9 +74,9 @@ font-6 = NotoSansCJK JP:style=Regular:pixelsize=12;3.5
 font-7 = NotoSansCJK SC:style=Regular:pixelsize=12;3.5
 font-8 = NotoSansCJK TC:style=Regular:pixelsize=12;3.5
 
-modules-left = powermenu cpu memory filesystem xwindow
+modules-left = powermenu filesystem xbacklight cpu memory xwindow
 modules-center = bspwm
-modules-right = xbacklight alsa battery calendar time
+modules-right = alsa battery calendar time
 
 tray-position = right
 tray-padding = 6
@@ -105,7 +105,7 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = %title%
-label-maxlen = 20
+label-maxlen = 25
 label-empty = Coolest Desktop Ever
 label-empty-padding = ${settings.padding}
 label-empty-background = ${colors.background-alt}
@@ -474,15 +474,15 @@ label-volume-padding = ${settings.padding}
 format-muted = 
 format-muted-font = 3
 format-muted-foreground = ${colors.background}
-format-muted-background = ${colors.yellow}
-format-muted-padding = ${settings.padding}
+format-muted-background = ${colors.aqua}
+format-muted-padding = 2
 
 ramp-volume-font = 3
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-volume-foreground = ${colors.background}
-ramp-volume-background = ${colors.yellow}
+ramp-volume-background = ${colors.aqua}
 ramp-volume-padding = ${settings.padding}
 
 ramp-headphones-0 = 
