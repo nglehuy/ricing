@@ -19,7 +19,7 @@
 [colors]
 background = ${xrdb:background:#000000000}
 background-alt = ${xrdb:colors8:#545862}
-foreground = ${xrdb:foreground:#c8ccd4}
+foreground = ${xrdb:color15:#c8ccd4}
 foreground-alt = ${xrdb:colors15:#c8ccd4}
 transparent = #000000000
 red = ${xrdb:colors1:#e06c75}
@@ -64,7 +64,7 @@ padding-right = 1
 
 module-margin = 0
 
-font-0 = CodeNewRoman NF:style=Bold:pixelsize=12;3
+font-0 = CodeNewRoman NF:style=Regular:pixelsize=12;3
 font-1 = NotoSans:style=Regular:pixelsize=12;3
 font-2 = FontAwesome5Free:style=Solid:pixelsize=9;2
 font-3 = FontAwesome5Brands:style=Solid:pixelsize=9;2
@@ -74,9 +74,9 @@ font-6 = NotoSansCJK JP:style=Regular:pixelsize=12;3
 font-7 = NotoSansCJK SC:style=Regular:pixelsize=12;3
 font-8 = NotoSansCJK TC:style=Regular:pixelsize=12;3
 
-modules-left = powermenu bspwm xwindow 
-modules-center = filesystem xbacklight cpu memory alsa battery
-modules-right =  calendar time
+modules-left = powermenu bspwm 
+modules-center = filesystem xbacklight cpu memory alsa battery xwindow 
+modules-right = calendar time
 
 tray-position = right
 tray-padding = 6
