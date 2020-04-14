@@ -70,6 +70,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'joshdick/onedark.vim'
 Plug 'dylanaraps/wal.vim'
+Plug 'lifepillar/vim-solarized8'
 
 " All of your Plugins must be added before the following line
 call plug#end()
@@ -101,11 +102,12 @@ let python_highlight_all=1
 " start theme config
 set termguicolors
 " colorscheme gruvbox
-colorscheme onedark
+" colorscheme onedark
+colorscheme solarized8
 " colorscheme wal
 " colorscheme monokai_pro
 " colorscheme ayu
-let g:airline_theme='onedark'
+let g:airline_theme='base16_solarized'
 " let g:molokai_original = 1
 " end theme config
 

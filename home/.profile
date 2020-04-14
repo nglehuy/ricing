@@ -11,9 +11,9 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
 export TERMINAL="env DRI_PRIME=1 /usr/bin/kitty"
-export PANEL_HEIGHT=24
-export PANEL_TOP_MARGIN=5
-export BORDER_SIZE=3
+export PANEL_HEIGHT=27
+export PANEL_TOP_MARGIN=0
+export BORDER_SIZE=2
 export GAP=10
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export EDITOR=/usr/bin/nvim

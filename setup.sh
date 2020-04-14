@@ -21,5 +21,5 @@ sudo cp -rfT $PWD/fonts /usr/share/fonts
 echo "Copying backgrounds ..."
 sudo cp -rfT $PWD/backgrounds /usr/share/backgrounds
 
-wal --theme base16-onedark
+wal --theme base16-solarized
 fc-cache -fv

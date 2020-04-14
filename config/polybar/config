@@ -17,7 +17,7 @@
 ;==========================================================
 
 [colors]
-background = #b6282c34
+background = ${xrdb:background:#000000000}
 background-alt = ${xrdb:colors8:#545862}
 foreground = ${xrdb:foreground:#c8ccd4}
 foreground-alt = ${xrdb:colors15:#c8ccd4}
@@ -36,14 +36,14 @@ monitor-strict = true
 ; Dimension defined as pixel value (e.g. 35) or percentage (e.g. 50%),
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in a width or height of 50% minus 10 pixels
-width = 100%:-20
+width = 100%
 height = ${env:PANEL_HEIGHT:24}
 bottom = false
 ; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in an offset in the x or y direction 
 ; of 50% minus 10 pixels
-offset-x = ${env:GAP:15}
+offset-x = 0
 offset-y = ${env:PANEL_TOP_MARGIN:5}
 radius = 0
 fixed-center = true
@@ -55,7 +55,7 @@ foreground = ${colors.foreground}
 line-size = 0
 ; line-color = #eee
 
-border-size = ${env:BORDER_SIZE:4}
+border-size = 0
 border-color = ${colors.background}
 border-transparent = false
 
@@ -64,19 +64,19 @@ padding-right = 1
 
 module-margin = 0
 
-font-0 = CodeNewRoman NF:style=Bold:pixelsize=12;3.5
-font-1 = NotoSans:style=Regular:pixelsize=12;3.5
-font-2 = FontAwesome5Free:style=Solid:pixelsize=10;3
-font-3 = FontAwesome5Brands:style=Solid:pixelsize=10;3
-font-4 = NotoSansCJK KR:style=Regular:pixelsize=12;3.5
-font-5 = NotoSansCJK HK:style=Regular:pixelsize=12;3.5
-font-6 = NotoSansCJK JP:style=Regular:pixelsize=12;3.5
-font-7 = NotoSansCJK SC:style=Regular:pixelsize=12;3.5
-font-8 = NotoSansCJK TC:style=Regular:pixelsize=12;3.5
+font-0 = CodeNewRoman NF:style=Bold:pixelsize=12;3
+font-1 = NotoSans:style=Regular:pixelsize=12;3
+font-2 = FontAwesome5Free:style=Solid:pixelsize=9;2
+font-3 = FontAwesome5Brands:style=Solid:pixelsize=9;2
+font-4 = NotoSansCJK KR:style=Regular:pixelsize=12;3
+font-5 = NotoSansCJK HK:style=Regular:pixelsize=12;3
+font-6 = NotoSansCJK JP:style=Regular:pixelsize=12;3
+font-7 = NotoSansCJK SC:style=Regular:pixelsize=12;3
+font-8 = NotoSansCJK TC:style=Regular:pixelsize=12;3
 
-modules-left = powermenu filesystem xbacklight cpu memory xwindow
-modules-center = bspwm
-modules-right = alsa battery calendar time
+modules-left = powermenu bspwm xwindow 
+modules-center = filesystem xbacklight cpu memory alsa battery
+modules-right =  calendar time
 
 tray-position = right
 tray-padding = 6
@@ -108,17 +108,17 @@ label = %title%
 label-maxlen = 25
 label-empty = Coolest Desktop Ever
 label-empty-padding = ${settings.padding}
-label-empty-background = ${colors.background-alt}
+label-empty-background = ${colors.background}
 label-empty-foreground = ${colors.foreground}
-label-padding = ${settings.padding}
-label-background = ${colors.background-alt}
+;label-padding = ${settings.padding}
+label-background = ${colors.background}
 label-foreground = ${colors.foreground}
 
 format-prefix = ""
 format-prefix-font = 3
 format-prefix-padding = ${settings.padding}
-format-prefix-foreground = ${colors.background}
-format-prefix-background = ${colors.yellow}
+format-prefix-foreground = ${colors.yellow}
+format-prefix-background = ${colors.background}
 
 ; [module/xkeyboard]
 ; type = internal/xkeyboard
@@ -147,23 +147,23 @@ mount-0 = /
 format-mounted-prefix = ""
 format-mounted-prefix-font = 3
 format-mounted-prefix-padding = ${settings.padding}
-format-mounted-prefix-background = ${colors.purple}
-format-mounted-prefix-foreground = ${colors.background}
+format-mounted-prefix-background = ${colors.background}
+format-mounted-prefix-foreground = ${colors.purple}
 
 label-mounted = %mountpoint%: %percentage_used%%
 label-mounted-foreground = ${colors.foreground}
-label-mounted-background = ${colors.background-alt}
-label-mounted-padding = ${settings.padding}
+label-mounted-background = ${colors.background}
+;label-mounted-padding = ${settings.padding}
 
 format-unmounted-prefix = ""
 format-unmounted-prefix-font = 3
 format-unmounted-prefix-padding = ${settings.padding}
-format-unmounted-prefix-background = ${colors.red}
-format-unmounted-prefix-foreground = ${colors.background}
+format-unmounted-prefix-background = ${colors.background}
+format-unmounted-prefix-foreground = ${colors.foreground}
 
 label-unmounted = %mountpoint%: not mounted
 label-unmounted-foreground = ${colors.foreground}
-label-unmounted-background = ${colors.background-alt}
+label-unmounted-background = ${colors.background}
 
 
 [module/bspwm]
@@ -174,23 +174,23 @@ pin-workspaces = true
 format = <label-state>
 
 label-focused = %name%
-label-focused-foreground = ${colors.background}
-label-focused-background = ${colors.blue}
+label-focused-foreground = ${colors.blue}
+label-focused-background = ${colors.background}
 label-focused-padding = ${settings.padding}
 
 label-occupied = %name%
-label-occupied-foreground = ${colors.background}
-label-occupied-background= ${colors.green}
+label-occupied-foreground = ${colors.green}
+label-occupied-background= ${colors.background}
 label-occupied-padding = ${settings.padding}
 
 label-urgent = %name%
-label-urgent-foreground = ${colors.background}
-label-urgent-background = ${colors.red}
+label-urgent-foreground = ${colors.red}
+label-urgent-line-color = ${colors.background}
 label-urgent-padding = ${settings.padding}
 
 label-empty = %name%
 label-empty-foreground = ${colors.foreground}
-label-empty-background = ${colors.background-alt}
+label-empty-background = ${colors.background}
 label-empty-padding = ${settings.padding}
 
 ; Separator in between workspaces
@@ -266,14 +266,14 @@ type = internal/xbacklight
 format = <label>
 format-prefix = ""
 format-prefix-font = 3
-format-prefix-background = ${colors.aqua}
-format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.background}
+format-prefix-foreground = ${colors.aqua}
 format-prefix-padding = ${settings.padding}
 
 label = %percentage%%
 label-foreground = ${colors.foreground}
-label-background = ${colors.background-alt}
-label-padding = ${settings.padding}
+label-background = ${colors.background}
+;label-padding = ${settings.padding}
 
 ; bar-width = 10
 ; bar-indicator = 
@@ -297,28 +297,28 @@ type = internal/cpu
 interval = 2
 format-prefix = ""
 format-prefix-font = 3
-format-prefix-foreground = ${colors.background}
-format-prefix-background = ${colors.green}
+format-prefix-foreground = ${colors.green}
+format-prefix-background = ${colors.background}
 format-prefix-padding = ${settings.padding}
 
 label = %percentage%%
-label-padding = ${settings.padding}
+;label-padding = ${settings.padding}
 label-foreground = ${colors.foreground}
-label-background = ${colors.background-alt}
+label-background = ${colors.background}
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = ""
 format-prefix-font = 3
-format-prefix-foreground = ${colors.background}
-format-prefix-background = ${colors.blue}
+format-prefix-foreground = ${colors.blue}
+format-prefix-background = ${colors.background}
 format-prefix-padding = ${settings.padding}
 
 label = %percentage_used%%
-label-padding = ${settings.padding}
+;label-padding = ${settings.padding}
 label-foreground = ${colors.foreground}
-label-background = ${colors.background-alt}
+label-background = ${colors.background}
 
 [module/wlan]
 type = internal/network
@@ -333,19 +333,19 @@ format-connected-prefix-padding = ${settings.padding}
 format-connected = <label-connected>
 label-connected = %essid%
 label-connected-foreground = ${colors.foreground}
-label-connected-background = ${colors.background-alt}
-label-connected-padding = ${settings.padding}
+label-connected-background = ${colors.background}
+;label-connected-padding = ${settings.padding}
 
 format-disconnected-prefix = ""
 format-disconnected-font = 3
 format-disconnected = <label-disconnected>
-format-disconnected-prefix-foreground = ${colors.background}
-format-disconnected-prefix-background = ${colors.purple}
+format-disconnected-prefix-foreground = ${colors.purple}
+format-disconnected-prefix-background = ${colors.background}
 format-disconnected-prefix-padding = ${settings.padding}
 label-disconnected = disconnected
 label-disconnected-foreground = ${colors.foreground}
-label-disconnected-background = ${colors.background-alt}
-label-disconnected-padding = ${settings.padding}
+label-disconnected-background = ${colors.background}
+;label-disconnected-padding = ${settings.padding}
 
 ; ramp-signal-0 = 
 ; ramp-signal-1 = 
@@ -361,9 +361,9 @@ interval = 3.0
 
 format-connected = ""
 format-connected-font = 3
-format-connected-foreground = ${colors.background}
-format-connected-background = ${colors.aqua}
-format-connected-padding = ${settings.padding}
+format-connected-foreground = ${colors.aqua}
+format-connected-background = ${colors.background}
+;format-connected-padding = ${settings.padding}
 
 [module/calendar]
 type = custom/script
@@ -376,13 +376,13 @@ format = <label>
 format-prefix = ""
 format-prefix-font = 3
 format-prefix-padding = ${settings.padding}
-format-prefix-foreground = ${colors.background}
-format-prefix-background = ${colors.blue}
+format-prefix-foreground = ${colors.blue}
+format-prefix-background = ${colors.background}
 
 label = %output%
-label-background = ${colors.background-alt}
+label-background = ${colors.background}
 label-foreground = ${colors.foreground}
-label-padding = ${settings.padding}
+;label-padding = ${settings.padding}
 
 [module/date]
 type = internal/date
@@ -405,12 +405,12 @@ time = %I:%M %p
 format-prefix = ""
 format-prefix-font = 3
 format-prefix-padding = ${settings.padding}
-format-prefix-foreground = ${colors.background}
-format-prefix-background = ${colors.green}
-format-background = ${colors.background-alt}
+format-prefix-foreground = ${colors.green}
+format-prefix-background = ${colors.background}
+format-background = ${colors.background}
 
 label = %time%
-label-padding = ${settings.padding}
+;label-padding = ${settings.padding}
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -419,13 +419,13 @@ type = internal/pulseaudio
 format-volume = <ramp-volume><label-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${colors.foreground}
-label-volume-background = ${colors.background-alt}
+label-volume-background = ${colors.background}
 label-volume-padding = ${settings.padding}
 
 format-muted = 
 format-muted-font = 3
-format-muted-foreground = ${colors.background}
-format-muted-background = ${colors.yellow}
+format-muted-foreground = ${colors.yellow}
+format-muted-background = ${colors.background}
 format-muted-padding = ${settings.padding}
 
 ramp-volume-font = 3
@@ -468,21 +468,21 @@ internal = 1
 format-volume = <ramp-volume><label-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${colors.foreground}
-label-volume-background = ${colors.background-alt}
-label-volume-padding = ${settings.padding}
+label-volume-background = ${colors.background}
+;label-volume-padding = ${settings.padding}
 
 format-muted = 
 format-muted-font = 3
-format-muted-foreground = ${colors.background}
-format-muted-background = ${colors.yellow}
+format-muted-foreground = ${colors.yellow}
+format-muted-background = ${colors.background}
 format-muted-padding = 2
 
 ramp-volume-font = 3
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-ramp-volume-foreground = ${colors.background}
-ramp-volume-background = ${colors.yellow}
+ramp-volume-foreground = ${colors.yellow}
+ramp-volume-background = ${colors.background}
 ramp-volume-padding = ${settings.padding}
 
 ramp-headphones-0 = 
@@ -502,13 +502,13 @@ format-discharging = <ramp-capacity><label-discharging>
 format-full = <ramp-capacity><label-full>
 
 label-charging-padding = ${settings.padding}
-label-charging-background = ${colors.background-alt}
+label-charging-background = ${colors.background}
 label-charging-foreground = ${colors.foreground}
-label-discharging-padding = ${settings.padding}
-label-discharging-background = ${colors.background-alt}
+;label-discharging-padding = ${settings.padding}
+label-discharging-background = ${colors.background}
 label-discharging-foreground = ${colors.foreground}
-label-full-padding = ${settings.padding}
-label-full-background = ${colors.background-alt}
+;label-full-padding = ${settings.padding}
+label-full-background = ${colors.background}
 label-full-foreground = ${colors.foreground}
 
 ramp-capacity-0 = 
@@ -517,8 +517,8 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 ramp-capacity-font = 3
-ramp-capacity-foreground = ${colors.background}
-ramp-capacity-background = ${colors.purple}
+ramp-capacity-foreground = ${colors.purple}
+ramp-capacity-background = ${colors.background}
 ramp-capacity-padding = ${settings.padding}
 
 animation-charging-0 = 
@@ -580,12 +580,12 @@ format = <label>
 format-prefix = ""
 format-prefix-font = 3
 format-prefix-padding = ${settings.padding}
-format-prefix-foreground = ${colors.background}
-format-prefix-background = ${colors.red}
+format-prefix-foreground = ${colors.red}
+format-prefix-background = ${colors.background}
 
 label = Power
-label-padding = ${settings.padding}
-label-background = ${colors.background-alt}
+;label-padding = ${settings.padding}
+label-background = ${colors.background}
 label-foreground = ${colors.foreground}
 
 
