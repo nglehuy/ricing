@@ -3,8 +3,6 @@
 
 ## export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
 xrdb merge .Xresources &
-## Wallpaper
-~/.fehbg &
 ## compositing. Required for shadows, transparency and stuff. 
 # Alter compton settings if using intel graphics
 # GRAPHIC_CARD=$(lspci | grep -i "vga" | sed 's/.*://' | sed 's/(.*//' | sed 's/^[ \t]*//')
@@ -35,8 +33,8 @@ xsetroot -cursor_name left_ptr &
 ## Repeat keys
 xset r rate 350 50 &
 ## Touchpad natural scrolling (xinput list => xinput list-props $id)
-xinput set-prop 17 303 1
-xinput set-prop 17 321 1
+xinput set-prop 13 303 1
+xinput set-prop 13 321 1
 ## Make monitor settings persist between reboots
 eval $(awk -F'=' '/Exec=/ {print $2}' ~/.config/autostart/lxrandr-autostart.desktop) &
 ## Notify about package updates
@@ -67,6 +65,10 @@ ibus-daemon -drx &
 ## Keybindings daemon
 sxhkd &
 ## POLYBAR
+xrandr --output eDP1 --auto --size 1920x1080 --noprimary --rate 60
+xrandr --output HDMI1 --auto --primary --size 1920x1080 --right-of eDP1 --rate 60
 ~/.config/polybar/launch.sh &
 dex -a -s ~/.config/autostart/ &
 wmname LG3D
+## Wallpaper
+~/.fehbg &

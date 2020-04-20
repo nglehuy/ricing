@@ -202,3 +202,4 @@ prompt spaceship
 #     [[ -z "$TMUX" ]] && exec tmux
 # fi
 
+export TERM=xterm-256color
