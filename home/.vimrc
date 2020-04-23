@@ -173,12 +173,12 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " autopep8
-let g:autopep8_max_line_length=79
+let g:autopep8_max_line_length=160
 let g:autopep8_disable_show_diff=1
 let g:autopep8_on_save=1
 let g:autopep8_indent_size=2
 let g:autopep8_ignore="E501,W293,E226,E24,W6,E121"
-autocmd FileType python set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=79 expandtab fileformat=unix
+autocmd FileType python set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=160 expandtab fileformat=unix
 autocmd FileType python noremap <buffer> <C-i> :call Autopep8("--ignore E121")<CR>
 set encoding=utf-8
 
