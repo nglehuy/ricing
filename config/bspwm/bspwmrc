@@ -88,7 +88,7 @@ bspc rule -a Slack desktop=팔
 bspc rule -a Skype desktop=칠
 bspc rule -a jetbrains-pycharm desktop=오
 bspc rule -a jetbrains-idea desktop=육
-bspc rule -a Anydesk desktop=십
+bspc rule -a Anydesk desktop=십 focus=on
 bspc rule -a GitKraken desktop=사
 
 ##  Autogap adjusts windowgap automatically according to the number of
