@@ -175,9 +175,10 @@ alias docean='ssh root@178.128.94.251'
 unsetopt PROMPT_SP
 
 # maven and java
-export JAVA_HOME=/usr/lib/jvm/default
+export JAVA_HOME=/usr/lib/jvm/default-java
 
 # pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
