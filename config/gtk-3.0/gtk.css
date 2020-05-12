@@ -1,17 +1,27 @@
-csd .titlebar,
-csd .titlebar:backdrop,
-.titlebar,
-.titlebar:backdrop {
-  padding: 0 10px;
+.csd headerbar,
+.csd headerbar:backdrop,
+headerbar,
+headerbar:backdrop {
+  padding: 0 12px;
+  min-height: 32px;
 }
-csd .titlebar .titlebutton,
-.titlebar .titlebutton,
-csd .titlebar:backdrop .titlebutton,
-.titlebar:backdrop .titlebutton{
+
+.csd headerbar .titlebutton,
+headerbar .titlebutton,
+.csd headerbar:backdrop .titlebutton,
+headerbar:backdrop .titlebutton{
   margin: 0;
   padding: 1px;
   min-width: 0px;
-  min-height: 25px;
+  min-height: 0px;
+}
+.terminal-screen {
+  padding: 8px;
+}
+
+.titlebar:not(headerbar),
+.titlebar:backdrop:not(headerbar) {
+  padding: 0;
 }
 
 /* * {
