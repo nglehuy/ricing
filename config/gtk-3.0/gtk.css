@@ -1,16 +1,30 @@
-* {
+csd .titlebar,
+csd .titlebar:backdrop,
+.titlebar,
+.titlebar:backdrop {
+  padding: 0 10px;
+}
+csd .titlebar .titlebutton,
+.titlebar .titlebutton,
+csd .titlebar:backdrop .titlebutton,
+.titlebar:backdrop .titlebutton{
+  margin: 0;
+  padding: 1px;
+  min-width: 0px;
+  min-height: 25px;
+}
+
+/* * {
   font-weight: 600;
   text-shadow: none;
 }
 
-/* remove window title from Client-Side Decorations */
 .solid-csd headerbar .title {
   font-size: 0;
 }
 
-/* hide extra window decorations/double border */
 window decoration {
   margin: 0;
   border: none;
   padding: 0;
-}
+}*/
