@@ -2,8 +2,8 @@
 .csd headerbar:backdrop,
 headerbar,
 headerbar:backdrop {
-  padding: 0 12px;
-  min-height: 36px;
+  padding: 0 8px;
+  min-height: 30px;
 }
 
 .csd headerbar .titlebutton,
@@ -11,10 +11,12 @@ headerbar .titlebutton,
 .csd headerbar:backdrop .titlebutton,
 headerbar:backdrop .titlebutton{
   margin: 0;
-  padding: 1px;
+  padding: 0 0px;
   min-width: 0px;
-  min-height: 0px;
+  min-height: fit-content;
+  height: fit-content;
 }
+
 .terminal-screen {
   padding: 8px;
 }
