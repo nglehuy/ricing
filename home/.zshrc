@@ -208,8 +208,6 @@ export TERM=xterm-256color
 # Fix snap apps in wayland
 if [ "$XDG_SESSION_TYPE" = "wayland" ] ; then
 
-    ...other wayland fixes...
-
     # Fix environment for Wayland + zsh + snapd
     if [ -f "/etc/profile.d/apps-bin-path.sh" ] ; then
         source /etc/profile.d/apps-bin-path.sh
