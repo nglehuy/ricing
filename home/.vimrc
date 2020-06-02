@@ -71,6 +71,9 @@ Plug 'phanviet/vim-monokai-pro'
 Plug 'joshdick/onedark.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'lifepillar/vim-solarized8'
+Plug 'ayu-theme/ayu-vim'
+
+Plug 'tranvansang/octave.vim'
 
 " All of your Plugins must be added before the following line
 call plug#end()
@@ -103,10 +106,11 @@ let python_highlight_all=1
 set termguicolors
 " colorscheme gruvbox
 " colorscheme onedark
-colorscheme solarized8
+" colorscheme solarized8
 " colorscheme wal
 " colorscheme monokai_pro
-" colorscheme ayu
+let ayucolor="mirage"
+colorscheme ayu
 let g:airline_theme='base16_solarized'
 " let g:molokai_original = 1
 " end theme config
