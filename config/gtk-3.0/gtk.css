@@ -1,7 +1,8 @@
+/*
 .csd headerbar,
 .csd headerbar:backdrop,
 headerbar,
-headerbar:backdrop {
+headerbar:backdrop{
   padding: 0 8px;
   min-height: 30px;
 }
@@ -9,7 +10,7 @@ headerbar:backdrop {
 .csd headerbar .titlebutton,
 headerbar .titlebutton,
 .csd headerbar:backdrop .titlebutton,
-headerbar:backdrop .titlebutton{
+headerbar:backdrop .titlebutton {
   margin: 0;
   padding: 0 0px;
   min-width: 0px;
@@ -17,14 +18,24 @@ headerbar:backdrop .titlebutton{
   height: fit-content;
 }
 
+.titlebar:not(headerbar),
+.titlebar:backdrop:not(headerbar) {
+  padding: 0;
+}*/
+
 .terminal-screen {
   padding: 8px;
 }
 
-.titlebar:not(headerbar),
-.titlebar:backdrop:not(headerbar) {
-  padding: 0;
+.maximized .csd headerbar,
+.maximized .csd headerbar:backdrop,
+.maximized headerbar,
+.maximized headerbar:backdrop {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
+
+
 
 /* * {
   font-weight: 600;
