@@ -163,7 +163,7 @@ alias cp='cp -vR'
 alias mv='mv -v'
 alias rm='rm -vR'
 alias docean='ssh root@178.128.94.251'
-alias homeserver='ssh nlhuy@27.77.182.239'
+alias homeserver='ssh nlhuy@27.74.118.58'
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
