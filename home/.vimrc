@@ -157,9 +157,9 @@ endfunction
 set sessionoptions-=options  " Don't save options
 
 " set default indentation
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set laststatus=2
 set splitright
@@ -180,9 +180,9 @@ nnoremap <C-H> <C-W><C-H>
 let g:autopep8_max_line_length=160
 let g:autopep8_disable_show_diff=1
 let g:autopep8_on_save=1
-let g:autopep8_indent_size=2
+let g:autopep8_indent_size=4
 let g:autopep8_ignore="E501,W293,E226,E24,W6,E121"
-autocmd FileType python set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=160 expandtab fileformat=unix
+autocmd FileType python set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=160 expandtab fileformat=unix
 autocmd FileType python noremap <buffer> <C-i> :call Autopep8("--ignore E121")<CR>
 set encoding=utf-8
 
