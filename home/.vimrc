@@ -139,14 +139,14 @@ autocmd VimEnter * nested call LoadSession()
 
 " save session
 " autocmd VimLeave * NERDTreeClose
-autocmd VimLeave * if getcwd() != $HOME && getcwd() != $HOME.'/.config/nvim/' | mksession! .session.vim | endif
+autocmd VimLeave * if getcwd() != $HOME && getcwd() != $HOME.'/.config/nvim/' | mksession! Session.vim | endif
 
 " load session
-" open vaffle only no .session.vim file 
+" open vaffle only no Session.vim file 
 function! LoadSession()
-    if getcwd() != $HOME.'/.config/nvim/' && getcwd() != $HOME && filereadable(".session.vim")
+    if getcwd() != $HOME.'/.config/nvim/' && getcwd() != $HOME && filereadable("Session.vim")
       " source local project Session.vim
-      source .session.vim
+      source Session.vim
     else
         if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in")
             call OpenVaffle()
@@ -181,9 +181,9 @@ let g:autopep8_max_line_length=160
 let g:autopep8_disable_show_diff=1
 let g:autopep8_on_save=1
 let g:autopep8_indent_size=4
-let g:autopep8_ignore="E501,W293,E226,E24,W6,E121"
+let g:autopep8_ignore="E501,W293,E226,E24,W6,E121,E402,E701,E702"
 autocmd FileType python set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=160 expandtab fileformat=unix
-autocmd FileType python noremap <buffer> <C-i> :call Autopep8("--ignore E121")<CR>
+autocmd FileType python noremap <buffer> <C-i> :call Autopep8()<CR>
 set encoding=utf-8
 
 " start syntastic config
@@ -218,12 +218,14 @@ let g:ale_sign_error = 'er'
 let g:ale_sign_warning = 'wn'
 let g:ale_lint_on_save=1
 let g:ale_lint_on_text_changed=0
-let g:ale_python_pylint_change_directory=0
-let g:ale_python_pylint_use_global=1
-let g:ale_python_pylint_auto_pipenv=1
+let g:ale_python_flake8_executable = 'python3'
+let g:ale_python_flake8_options = '-m flake8'
+let g:ale_python_flake8_change_directory=1
+let g:ale_python_flake8_use_global=0
+let g:ale_python_flake8_auto_pipenv=1
 let g:ale_list_window_size=1
 let g:ale_linters = {
-\   'python': ['pylint'],
+\   'python': ['flake8'],
 \   'javascript': ['eslint'],
 \   'vue': ['eslint']
 \}
