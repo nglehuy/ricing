@@ -131,9 +131,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
- export PATH=~/.npm-global/bin:$PATH
- alias cp="cp -R"
- alias homeserver="nlhuy@27.74.118.58"
- alias docean="root@178.128.94.251"
+export PATH=~/.npm-global/bin:$PATH
+alias cp="cp -R"
+export HOMESERVER="nlhuy@27.74.118.58"
+export DOCEAN="root@178.128.94.251"
 
- conda activate tf
+conda activate tf

@@ -148,7 +148,7 @@ SPACESHIP_PROMPT_ORDER=(
   terraform   # Terraform workspace section
   exec_time   # Execution time
   line_sep    # Line break
-  battery     # Battery level and status
+  #battery     # Battery level and status
   vi_mode     # Vi-mode indicator
   jobs        # Background jobs indicator
   exit_code   # Exit code section
@@ -179,8 +179,8 @@ unsetopt PROMPT_SP
 export JAVA_HOME=/usr/lib/jvm/default-java
 
 # pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
+# export PATH="$HOME/.pyenv/bin:$PATH"
+# eval "$(pyenv init -)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -215,3 +215,20 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ] ; then
     fi
 
 fi
+
+# >>> conda initialize >>>
+# # !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/nlhuy/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0  ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/nlhuy/anaconda3/etc/profile.d/conda.sh"  ]; then
+        . "/home/nlhuy/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/nlhuy/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+conda activate tf
