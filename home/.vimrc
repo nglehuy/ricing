@@ -35,7 +35,7 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " COC 
-Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': ':call coc#util#install()' }
+Plug 'neoclide/coc.nvim', {'branch': 'release' }
 
 " Python formatter
 Plug 'tell-k/vim-autopep8'
@@ -123,23 +123,20 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 25
 " end netrw config
 
-" start NERDTree config
-let NERDTreeShowHidden = 1
-" let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeHijackNetrw = 1
-map <C-t> :NERDTreeToggle<CR>
-" Start NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * nested call LoadSession()
-" autocmd VimEnter * NERDTree
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | q | endif
-" end NERDTree config
-
+command mksession "mksession Session.vim"
 " save session
-" autocmd VimLeave * NERDTreeClose
-autocmd VimLeave * if getcwd() != $HOME && getcwd() != $HOME.'/.config/nvim/' | mksession! Session.vim | endif
+autocmd VimLeave * if getcwd() != $HOME && getcwd() != $HOME.'/.config/nvim/' | call SaveSession() | endif
+
+function! SaveSession()
+    if filereadable("Session.vim")
+        echo "Saving ."
+        mksession! Session.vim
+    else
+        echo "No Session."
+    endif
+endfunction
 
 " load session
 " open vaffle only no Session.vim file 

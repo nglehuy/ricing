@@ -163,7 +163,7 @@ alias cp='cp -vR'
 alias mv='mv -v'
 alias rm='rm -vR'
 alias docean='ssh root@178.128.94.251'
-alias homeserver='ssh nlhuy@27.74.118.58'
+alias homeserver='ssh nlhuy@27.64.137.25'
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
@@ -176,7 +176,7 @@ alias homeserver='ssh nlhuy@27.74.118.58'
 unsetopt PROMPT_SP
 
 # maven and java
-export JAVA_HOME=/usr/lib/jvm/default-java
+export JAVA_HOME=/usr/lib/jvm/default
 
 # pyenv
 # export PATH="$HOME/.pyenv/bin:$PATH"
@@ -217,12 +217,12 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ] ; then
 fi
 
 # >>> conda initialize >>>
-# # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/nlhuy/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0  ]; then
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/nlhuy/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/nlhuy/anaconda3/etc/profile.d/conda.sh"  ]; then
+    if [ -f "/home/nlhuy/anaconda3/etc/profile.d/conda.sh" ]; then
         . "/home/nlhuy/anaconda3/etc/profile.d/conda.sh"
     else
         export PATH="/home/nlhuy/anaconda3/bin:$PATH"
@@ -230,5 +230,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-conda activate tf
