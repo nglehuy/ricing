@@ -91,6 +91,8 @@ let g:onedark_terminal_italics = 1
 set relativenumber
 set showmatch
 set showcmd
+set noshowmode
+"set cmdheight=1
 set cursorline
 highlight clear CursorLine " Removes the underline causes by enabling cursorline
 syntax on
@@ -102,7 +104,8 @@ let g:airline#extensions#ale#enabled = 1
 let python_highlight_all=1
 " end nvim/vim config
 
-" start theme config
+set guifont=Cascadia\ Code:h16
+"start theme config
 set termguicolors
 " colorscheme gruvbox
 " colorscheme onedark
@@ -229,8 +232,8 @@ let g:ale_linters = {
 let g:airline#extensions#ale#enabled=1
 " end ALE config
 
-:set listchars=tab:\|\ 
-:set list
+set listchars=tab:\|\ 
+set list
 
 " Indent line guides
 " let g:indentLine_setColors = 0
@@ -309,7 +312,6 @@ set hidden
 set nobackup
 set nowritebackup
 " Give more space for displaying messages.
-set cmdheight=2
 set updatetime=300
 set shortmess+=c
 
