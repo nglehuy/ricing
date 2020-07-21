@@ -1,4 +1,4 @@
 [pep8]
 ignore=E402,E701,E702
-max-line-length=160
+max-line-length=96
 indent-size=4

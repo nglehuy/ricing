@@ -35,10 +35,10 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
 " COC 
-Plug 'neoclide/coc.nvim', {'branch': 'release' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Python formatter
-Plug 'tell-k/vim-autopep8'
+" Plug 'tell-k/vim-autopep8'
 
 " OPERATOR TO SURROUND A TEXT OBJECT
 Plug 'kana/vim-operator-user'
@@ -54,11 +54,10 @@ Plug 'prettier/vim-prettier'
 Plug 'chrisbra/csv.vim'
 
 " Syntax++
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 
 " fuzzy finder
 Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
 
 " Comment
 Plug 'tpope/vim-commentary'
@@ -67,9 +66,7 @@ Plug 'tpope/vim-commentary'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'phanviet/vim-monokai-pro'
 Plug 'joshdick/onedark.vim'
-Plug 'dylanaraps/wal.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'ayu-theme/ayu-vim'
 
@@ -88,11 +85,12 @@ let g:deoplete#enable_at_startup = 1
 let g:onedark_terminal_italics = 1
 
 " start nvim/vim config
+let g:neovide_cursor_vfx_mode = "sonicboom"
 set relativenumber
 set showmatch
 set showcmd
 set noshowmode
-"set cmdheight=1
+set cmdheight=1
 set cursorline
 highlight clear CursorLine " Removes the underline causes by enabling cursorline
 syntax on
@@ -112,7 +110,7 @@ set termguicolors
 " colorscheme solarized8
 " colorscheme wal
 " colorscheme monokai_pro
-let ayucolor="mirage"
+let ayucolor="dark"
 colorscheme ayu
 let g:airline_theme='base16_solarized'
 " let g:molokai_original = 1
@@ -177,7 +175,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " autopep8
-let g:autopep8_max_line_length=160
+let g:autopep8_max_line_length=96
 let g:autopep8_disable_show_diff=1
 let g:autopep8_on_save=1
 let g:autopep8_indent_size=4
@@ -185,18 +183,6 @@ let g:autopep8_ignore="E501,W293,E226,E24,W6,E121,E402,E701,E702"
 autocmd FileType python set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=160 expandtab fileformat=unix
 autocmd FileType python noremap <buffer> <C-i> :call Autopep8()<CR>
 set encoding=utf-8
-
-" start syntastic config
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" 
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-" let g:syntastic_enable_highlighting=1
-" end syntastic config
 
 " virtualenv
 " %{virtualenv#statusline()}
@@ -214,8 +200,11 @@ EOF
 endif
 
 " start ALE config
-let g:ale_sign_error = 'er'
-let g:ale_sign_warning = 'wn'
+let g:ale_sign_error = 'E'
+let g:ale_sign_warning = 'W'
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_lint_on_save=1
 let g:ale_lint_on_text_changed=0
 let g:ale_python_flake8_executable = 'python3'
@@ -224,10 +213,15 @@ let g:ale_python_flake8_change_directory=1
 let g:ale_python_flake8_use_global=0
 let g:ale_python_flake8_auto_pipenv=1
 let g:ale_list_window_size=1
+let g:ale_linters_aliases = {'jsx': ['css', 'javascript', 'vue']}
 let g:ale_linters = {
 \   'python': ['flake8'],
-\   'javascript': ['eslint'],
-\   'vue': ['eslint']
+\   'jsx': ['eslint']
+\}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['autopep8'],
+\   'jsx': ['prettier']
 \}
 let g:airline#extensions#ale#enabled=1
 " end ALE config
@@ -308,6 +302,26 @@ map sh <Plug>(vaffle-open-selected-split)
 map sv <Plug>(vaffle-open-selected-vsplit)
 
 " Coc nvim
+let g:coc_global_extensions = [
+            \'coc-json',
+            \'coc-clangd',
+            \'coc-python',
+            \'coc-cmake',
+            \'coc-tsserver',
+            \'coc-css',
+            \'coc-prettier',
+            \'coc-eslint',
+            \'coc-flutter',
+            \'coc-fzf-preview',
+            \'coc-angular',
+            \'coc-git',
+            \'coc-java',
+            \'coc-stylelintplus',
+            \'coc-sql',
+            \'coc-texlab',
+            \'coc-yaml',
+            \'coc-vetur',
+            \'coc-html']
 set hidden
 set nobackup
 set nowritebackup
