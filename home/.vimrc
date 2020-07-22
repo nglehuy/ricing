@@ -64,7 +64,7 @@ Plug 'tpope/vim-commentary'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'joshdick/onedark.vim'
+Plug 'rakr/vim-one'
 Plug 'lifepillar/vim-solarized8'
 Plug 'ayu-theme/ayu-vim'
 
@@ -74,10 +74,6 @@ Plug 'tranvansang/octave.vim'
 call plug#end()
 
 filetype plugin indent on    " required
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-" call deoplete#custom#option('ignore_sources': { 'py' })
 
 " onedark
 let g:onedark_terminal_italics = 1
@@ -102,14 +98,15 @@ let python_highlight_all=1
 " end nvim/vim config
 
 set guifont=Cascadia\ Code:h16
+let g:one_allow_italics = 1
 "start theme config
 set termguicolors
 " colorscheme gruvbox
-" colorscheme onedark
+colorscheme one
 " colorscheme solarized8
 let ayucolor="dark"
-colorscheme ayu
-let g:airline_theme='base16_solarized'
+" colorscheme ayu
+let g:airline_theme='one'
 " let g:molokai_original = 1
 " end theme config
 
@@ -150,6 +147,12 @@ function! LoadSession()
 endfunction
 
 set sessionoptions-=options  " Don't save options
+
+function! RenderMyFavoriteIcon(item)
+  return WebDevIconsGetFileTypeSymbol(a:item.basename, a:item.is_dir)
+endfunction
+
+let g:vaffle_render_custom_icon = 'RenderMyFavoriteIcon'
 
 " set default indentation
 set tabstop=4
