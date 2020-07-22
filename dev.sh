@@ -19,7 +19,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 mkdir ~/.swap-files
 
 echo "Setting up yarn ..."
-yarn global add spaceship-prompt neovim
+yarn global add spaceship-prompt neovim bash-language-server dockerfile-language-server-nodejs
 gem install neovim
 
 echo "Setting up npm ..."
@@ -31,7 +31,7 @@ eval "$(pyenv init -)"
 pyenv install 3.7.7
 pyenv install 2.7.17
 pyenv shell 2.7.17 && pip install neovim
-pyenv shell 3.7.7 && pip install neovim pylint autopep8
+pyenv shell 3.7.7 && pip install neovim flake8 autopep8 pep8 python-language-server
 pyenv global 3.7.7
 
 echo "Setting up zsh ..."
