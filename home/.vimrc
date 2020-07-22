@@ -2,8 +2,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
-" Ale
-Plug 'dense-analysis/ale'
+" Syntax
+Plug 'kh3phr3n/python-syntax'
 
 " Brings physics-based smooth scrolling to the Vim/Neovim world!
 Plug 'yuttie/comfortable-motion.vim'
@@ -58,7 +58,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
 
 " Comment
-Plug 'tpope/vim-commentary'
+Plug 'tomtom/tcomment_vim'
 
 " Themes
 Plug 'morhetz/gruvbox'
@@ -80,6 +80,8 @@ let g:onedark_terminal_italics = 1
 
 " start nvim/vim config
 let g:neovide_cursor_vfx_mode = "sonicboom"
+let g:neovide_no_idle=v:true
+let g:neovide_cursor_trail_length=1
 set relativenumber
 set showmatch
 set showcmd
@@ -88,6 +90,7 @@ set cmdheight=1
 set cursorline
 highlight clear CursorLine " Removes the underline causes by enabling cursorline
 syntax on
+let python_highlight_all = 1
 set background=dark
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
@@ -105,7 +108,7 @@ colorscheme onedark
 let ayucolor="dark"
 " colorscheme ayu
 let g:airline_theme='onedark'
-" let g:molokai_original = 1
+let g:gruvbox_contrast_dark='hard'
 " end theme config
 
 " start netrw config
@@ -174,30 +177,30 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " start ALE config
-let g:ale_sign_error = 'E'
-let g:ale_sign_warning = 'W'
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-let g:ale_lint_on_save=1
-let g:ale_lint_on_text_changed=0
-let g:ale_python_flake8_executable = 'python3'
-let g:ale_python_flake8_options = '-m flake8'
-let g:ale_python_flake8_change_directory=1
-let g:ale_python_flake8_use_global=0
-let g:ale_python_flake8_auto_pipenv=1
-let g:ale_list_window_size=1
-let g:ale_linters_aliases = {'jsx': ['css', 'javascript', 'vue']}
-let g:ale_linters = {
-\   'python': ['flake8'],
-\   'jsx': ['eslint']
-\}
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['autopep8'],
-\   'jsx': ['prettier']
-\}
-let g:airline#extensions#ale#enabled=1
+" let g:ale_sign_error = 'E'
+" let g:ale_sign_warning = 'W'
+" let g:ale_echo_msg_error_str = 'E'
+" let g:ale_echo_msg_warning_str = 'W'
+" let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" let g:ale_lint_on_save=1
+" let g:ale_lint_on_text_changed=0
+" let g:ale_python_flake8_executable = 'python3'
+" let g:ale_python_flake8_options = '-m flake8'
+" let g:ale_python_flake8_change_directory=1
+" let g:ale_python_flake8_use_global=0
+" let g:ale_python_flake8_auto_pipenv=1
+" let g:ale_list_window_size=1
+" let g:ale_linters_aliases = {'jsx': ['css', 'javascript', 'vue']}
+" let g:ale_linters = {
+" \   'python': ['flake8'],
+" \   'jsx': ['eslint']
+" \}
+" let g:ale_fixers = {
+" \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+" \   'python': ['autopep8'],
+" \   'jsx': ['prettier']
+" \}
+" let g:airline#extensions#ale#enabled=1
 " end ALE config
 
 set listchars=tab:\|\ 
@@ -219,9 +222,6 @@ let g:comfortable_motion_scroll_up_key = "k"
 " Background
 "hi Normal guibg=NONE ctermbg=NONE
 hi LineNr guibg=NONE ctermbg=NONE
-
-" Gruvbox config
-let g:gruvbox_italic = 1
 
 " Rainbow
 let g:rainbow_active = 1
@@ -297,7 +297,8 @@ let g:coc_global_extensions = [
             \'coc-texlab',
             \'coc-yaml',
             \'coc-vetur',
-            \'coc-html']
+            \'coc-html',
+            \'coc-go']
 set hidden
 set nobackup
 set nowritebackup

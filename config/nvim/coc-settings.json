@@ -11,5 +11,19 @@
         "python"
     ],
     "python.linting.flake8Enabled": true,
-    "python.linting.pep8Enabled": true
+    "python.linting.pep8Enabled": true,
+    "python.jediEnabled": true,
+    "languageserver": {
+        "dockerfile": {
+            "command": "docker-langserver",
+            "filetypes": ["dockerfile"],
+            "args": ["--stdio"]
+        },
+        "bash": {
+            "command": "bash-language-server",
+            "args": ["start"],
+            "filetypes": ["sh"],
+            "ignoredRootPaths": ["~"]
+        }
+    }
 }
