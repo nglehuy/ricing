@@ -37,9 +37,6 @@ Plug 'plasticboy/vim-markdown'
 " COC 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Python formatter
-" Plug 'tell-k/vim-autopep8'
-
 " OPERATOR TO SURROUND A TEXT OBJECT
 Plug 'kana/vim-operator-user'
 Plug 'rhysd/vim-operator-surround'
@@ -53,11 +50,12 @@ Plug 'prettier/vim-prettier'
 " Csv file
 Plug 'chrisbra/csv.vim'
 
-" Syntax++
-" Plug 'sheerun/vim-polyglot'
-
 " fuzzy finder
 Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
+" Icons
+Plug 'ryanoasis/vim-devicons'
 
 " Comment
 Plug 'tpope/vim-commentary'
@@ -99,6 +97,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#ale#enabled = 1
+let g:airline_powerline_fonts = 1
 let python_highlight_all=1
 " end nvim/vim config
 
@@ -108,8 +107,6 @@ set termguicolors
 " colorscheme gruvbox
 " colorscheme onedark
 " colorscheme solarized8
-" colorscheme wal
-" colorscheme monokai_pro
 let ayucolor="dark"
 colorscheme ayu
 let g:airline_theme='base16_solarized'
@@ -162,8 +159,9 @@ set expandtab
 set laststatus=2
 set splitright
 set splitbelow
-set textwidth=79
+set textwidth=96
 set fileformat=unix
+set encoding=utf-8
 
 " for javascript
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
@@ -173,31 +171,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
-" autopep8
-let g:autopep8_max_line_length=96
-let g:autopep8_disable_show_diff=1
-let g:autopep8_on_save=1
-let g:autopep8_indent_size=4
-let g:autopep8_ignore="E501,W293,E226,E24,W6,E121,E402,E701,E702"
-autocmd FileType python set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=160 expandtab fileformat=unix
-autocmd FileType python noremap <buffer> <C-i> :call Autopep8()<CR>
-set encoding=utf-8
-
-" virtualenv
-" %{virtualenv#statusline()}
-
-" python with virtualenv support
-if has('python')
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
-endif
 
 " start ALE config
 let g:ale_sign_error = 'E'
@@ -231,7 +204,9 @@ set list
 
 " Indent line guides
 " let g:indentLine_setColors = 0
+let g:indentLine_enabled = 1
 let g:indentLine_char = '|'
+let g:indentLine_setConceal = 0
 
 " Gitgutter
 let g:gitgutter_highlight_lines = 0
@@ -325,7 +300,6 @@ let g:coc_global_extensions = [
 set hidden
 set nobackup
 set nowritebackup
-" Give more space for displaying messages.
 set updatetime=300
 set shortmess+=c
 
