@@ -64,7 +64,7 @@ Plug 'tpope/vim-commentary'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'rakr/vim-one'
+Plug 'joshdick/onedark.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'ayu-theme/ayu-vim'
 
@@ -96,15 +96,15 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
 " end nvim/vim config
 
-set guifont=Cascadia\ Code:h16
+set guifont=CaskaydiaCove\ Nerd\ Font\ Mono:h16
 "start theme config
 set termguicolors
 " colorscheme gruvbox
-colorscheme one
+colorscheme onedark
 " colorscheme solarized8
 let ayucolor="dark"
 " colorscheme ayu
-let g:airline_theme='one'
+let g:airline_theme='onedark'
 " let g:molokai_original = 1
 " end theme config
 
