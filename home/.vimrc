@@ -88,17 +88,15 @@ set cmdheight=1
 set cursorline
 highlight clear CursorLine " Removes the underline causes by enabling cursorline
 syntax on
-set bg=dark
+set background=dark
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
-let python_highlight_all=1
 " end nvim/vim config
 
 set guifont=Cascadia\ Code:h16
-let g:one_allow_italics = 1
 "start theme config
 set termguicolors
 " colorscheme gruvbox
