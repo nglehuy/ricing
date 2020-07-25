@@ -3,7 +3,7 @@ filetype off                  " required
 
 call plug#begin('~/.vim/plugged')
 " Syntax
-Plug 'kh3phr3n/python-syntax'
+Plug 'vim-python/python-syntax'
 
 " Brings physics-based smooth scrolling to the Vim/Neovim world!
 Plug 'yuttie/comfortable-motion.vim'
@@ -67,6 +67,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'joshdick/onedark.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'ayu-theme/ayu-vim'
+Plug 'chriskempson/base16-vim'
 
 Plug 'tranvansang/octave.vim'
 
@@ -90,7 +91,7 @@ set cmdheight=1
 set cursorline
 highlight clear CursorLine " Removes the underline causes by enabling cursorline
 syntax on
-let python_highlight_all = 1
+let g:python_highlight_all = 1
 set background=dark
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tab_nr = 1
@@ -102,12 +103,14 @@ let g:airline_powerline_fonts = 1
 set guifont=CaskaydiaCove\ Nerd\ Font\ Mono:h16
 "start theme config
 set termguicolors
+let base16colorspace=256  " Access colors present in 256 colorspace
 " colorscheme gruvbox
 colorscheme onedark
 " colorscheme solarized8
+" colorscheme base16-google-dark
 let ayucolor="dark"
 " colorscheme ayu
-let g:airline_theme='onedark'
+let g:airline_theme='ayu_dark'
 let g:gruvbox_contrast_dark='hard'
 " end theme config
 
