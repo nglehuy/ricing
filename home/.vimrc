@@ -100,7 +100,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
 " end nvim/vim config
 
-set guifont=CaskaydiaCove\ Nerd\ Font\ Mono:h16
+set guifont=CaskaydiaCove\ Nerd\ Font\ Mono:h16:b
 "start theme config
 set termguicolors
 let base16colorspace=256  " Access colors present in 256 colorspace
