@@ -162,8 +162,7 @@ SPACESHIP_RPROMPT_ORDER=(
 alias cp='cp -vR'
 alias mv='mv -v'
 alias rm='rm -vR'
-alias docean='ssh root@178.128.94.251'
-alias homeserver='ssh nlhuy@27.64.137.25'
+alias homeserver='ssh nlhuy@27.64.55.118'
 alias nvide="nohup env DRI_PRIME=1 neovide > /dev/null 2>&1 & disown"
 
 # Import colorscheme from 'wal' asynchronously

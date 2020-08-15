@@ -83,7 +83,8 @@ let g:onedark_terminal_italics = 1
 let g:neovide_cursor_vfx_mode = "sonicboom"
 let g:neovide_no_idle=v:true
 let g:neovide_cursor_trail_length=1
-set relativenumber
+" set relativenumber
+set number
 set showmatch
 set showcmd
 set noshowmode
