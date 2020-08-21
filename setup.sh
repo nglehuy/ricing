@@ -11,12 +11,11 @@ sudo pacman -Syu --needed --noconfirm dunst pamac \
   blueman xorg-xsetroot \
   ibus ibus-hangul \
   ttf-font-awesome noto-fonts noto-fonts-extra noto-fonts-cjk noto-fonts-emoji \
-  yad rofi polybar picom bspwm-scripts sxhkd python-pywal \
+  yad rofi picom sxhkd bspwm python-pywal \
   gnome-disk-utility \
   discord kitty
 
-yay -Syu --needed --noconfirm slack-desktop shutter perl-goo-canvas ibus-bamboo \
-  nerd-fonts-fira-code radeontop oomox 
+yay -Syu --needed --noconfirm slack-desktop ibus-bamboo nerd-fonts-fira-code radeontop oomox polybar
 
 echo "Add user to video group ..."
 sudo usermod -a -G video $USER
