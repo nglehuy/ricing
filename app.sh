@@ -3,11 +3,10 @@ cd $HOME
 
 sudo pacman -Rcns --noconfirm manjaro-hello
 sudo pacman -Rcns $(pacman -Qnq | grep manjaro-gnome*)
-sudo pacman -Rcns $(pacman -Qnq | grep gnome*)
 sudo pacman -Rcns $(pacman -Qnq | grep maia)
 
 echo "Installing desktop apps ..."
-sudo pacman -Syu --needed  dunst pamac \
+sudo pacman -Syu --needed --noconfirm  dunst pamac \
   network-manager-applet nm-connection-editor networkmanager \
   light dex \
   ranger \
@@ -17,11 +16,9 @@ sudo pacman -Syu --needed  dunst pamac \
   blueman xorg-xsetroot \
   ibus ibus-hangul \
   ttf-font-awesome noto-fonts noto-fonts-extra noto-fonts-cjk noto-fonts-emoji \
-  ttf-roboto \
-  yad rofi polybar picom bspwm bspwm-scripts sxhkd python-pywal \
+  yad rofi polybar picom bspwm-scripts sxhkd python-pywal \
   gnome-disk-utility yay \
-  discord chromium snapd code docker kitty \
-  based-devel
+  discord snapd docker kitty
 
 echo "Setting up snapd ..."
 sudo systemctl enable --now snapd.socket
