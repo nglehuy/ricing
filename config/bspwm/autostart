@@ -59,14 +59,14 @@ killall -q blueman-applet
 while pgrep -u $UID -x blueman-applet >/dev/null; do sleep 1; done
 blueman-applet &
 ## PYWAL
-wal --theme base16-solarized &
+wal --theme base16-onedark &
 ## IBUS
 ibus-daemon -drx &
 ## Keybindings daemon
 sxhkd &
 ## POLYBAR
-xrandr --output eDP1 --auto --size 1920x1080 --noprimary --rate 60
-xrandr --output HDMI1 --auto --primary --size 1920x1080 --right-of eDP1 --rate 60
+xrandr --output HDMI-1 --auto --primary --size 1920x1080 --rate 60
+xrandr --output eDP-1 --auto --size 1920x1080 --noprimary --right-of HDMI-1 --rate 60
 ~/.config/polybar/launch.sh &
 dex -a -s ~/.config/autostart/ &
 wmname LG3D

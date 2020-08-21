@@ -1,7 +1,7 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 echo "Installing apps ..."
-sudo pacman -Syu --needed --noconfirm dunst pamac \
+sudo pacman -Syu --needed --noconfirm dunst \
   network-manager-applet nm-connection-editor networkmanager \
   light dex \
   ranger \

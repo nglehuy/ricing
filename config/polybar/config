@@ -64,10 +64,10 @@ padding-right = 1
 
 module-margin = 0
 
-font-0 = CodeNewRoman NF:style=Regular:pixelsize=12;3
+font-0 = FiraCode Nerd Font:style=Medium:pixelsize=11;3
 font-1 = NotoSans:style=Regular:pixelsize=12;3
-font-2 = FontAwesome5Free:style=Solid:pixelsize=9;2
-font-3 = FontAwesome5Brands:style=Solid:pixelsize=9;2
+font-2 = FontAwesome5Free:style=Solid:pixelsize=10;2
+font-3 = FontAwesome5Brands:style=Solid:pixelsize=10;2
 font-4 = NotoSansCJK KR:style=Regular:pixelsize=12;3
 font-5 = NotoSansCJK HK:style=Regular:pixelsize=12;3
 font-6 = NotoSansCJK JP:style=Regular:pixelsize=12;3
@@ -471,11 +471,11 @@ label-volume-foreground = ${colors.foreground}
 label-volume-background = ${colors.background}
 ;label-volume-padding = ${settings.padding}
 
-format-muted = 
+format-muted = "  "
 format-muted-font = 3
 format-muted-foreground = ${colors.yellow}
 format-muted-background = ${colors.background}
-format-muted-padding = 2
+format-muted-padding = 0
 
 ramp-volume-font = 3
 ramp-volume-0 = 
