@@ -68,11 +68,11 @@ font-0 = FiraCode Nerd Font:style=Medium:pixelsize=11;3
 font-1 = NotoSans:style=Regular:pixelsize=12;3
 font-2 = FontAwesome5Free:style=Solid:pixelsize=10;2
 font-3 = FontAwesome5Brands:style=Solid:pixelsize=10;2
-font-4 = NotoSansCJK KR:style=Regular:pixelsize=12;3
-font-5 = NotoSansCJK HK:style=Regular:pixelsize=12;3
-font-6 = NotoSansCJK JP:style=Regular:pixelsize=12;3
-font-7 = NotoSansCJK SC:style=Regular:pixelsize=12;3
-font-8 = NotoSansCJK TC:style=Regular:pixelsize=12;3
+font-4 = NotoSansCJK KR:style=Medium:pixelsize=12;3
+font-5 = NotoSansCJK HK:style=Medium:pixelsize=12;3
+font-6 = NotoSansCJK JP:style=Medium:pixelsize=12;3
+font-7 = NotoSansCJK SC:style=Medium:pixelsize=12;3
+font-8 = NotoSansCJK TC:style=Medium:pixelsize=12;3
 
 modules-left = powermenu bspwm 
 modules-center = filesystem xbacklight cpu memory alsa battery xwindow 
@@ -174,7 +174,7 @@ pin-workspaces = true
 format = <label-state>
 
 label-focused = %name%
-label-focused-foreground = ${colors.blue}
+label-focused-foreground = ${colors.purple}
 label-focused-background = ${colors.background}
 label-focused-padding = ${settings.padding}
 
