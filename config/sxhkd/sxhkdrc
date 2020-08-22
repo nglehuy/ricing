@@ -314,10 +314,10 @@ super + shift + Escape
 
 # In case bspwmrc fails to execute/you wish have plugged in a new monitor
 super + shift + r
-	bspwmrc
+	$HOME/.config/bspwm/bspwmrc
 #edit this file
 alt + ctrl + space
-	sxhkdrc
+	$HOME/.config/sxhkd/sxhkdrc
 # Toggle compositing
 super + ctrl + space
 	{pkill picom ,\

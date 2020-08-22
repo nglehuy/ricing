@@ -33,8 +33,8 @@ xsetroot -cursor_name left_ptr &
 ## Repeat keys
 xset r rate 350 50 &
 ## Touchpad natural scrolling (xinput list => xinput list-props $id)
-xinput set-prop 12 330 1
-xinput set-prop 12 312 1
+xinput set-prop 'DELL0844:00 04F3:3074 Touchpad' 'libinput Tapping Enabled' 1
+xinput set-prop 'DELL0844:00 04F3:3074 Touchpad' 'libinput Natural Scrolling Enabled' 1
 ## Make monitor settings persist between reboots
 eval $(awk -F'=' '/Exec=/ {print $2}' ~/.config/autostart/lxrandr-autostart.desktop) &
 ## Notify about package updates
