@@ -1,13 +1,5 @@
 ﻿# bspwm hotkeys
 #
-# Cleanly quit bspwm
-# super + shift + q
-#	bspc quit 1 && pkill lemonpanel && pkill lemonbar
-
-# Show keybindings
-super + F1
-	$TERMINAL keybindings.sh
-#
 # Window manipulation
 # ______________
 
@@ -88,9 +80,6 @@ alt + ctrl + {Left,Down,Up,Right}
 alt + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 		
-# Move current window to largest space or preselected area if there is one.
-super + Return
-    windowpromoter
 
 # Create a new "master area", splitting the whole desktop instead of just windows.
 alt + Return
@@ -98,7 +87,7 @@ alt + Return
 	
 # go (Shift=move) to desktop (and focus the monitor that the desktop is located on. Bspwm style)
 super + {_,shift + }{1-9,0}
-    bspc {desktop -f,node -d} ^{1-9,10}
+    bspc {desktop -f,node -d} ^{1-9,10} --follow
 
 ## Alternative: i3 style behavior (focus nth, desktop of the focused monitor)
 #super + {1-9,0}
@@ -124,14 +113,8 @@ alt + {_,shift + }Tab
     -kb-accept-entry "!Alt-Tab,!Alt+Alt_L" \
     -kb-row-down "Alt+Tab" \
     #bspc node -f {next,prev}
-
-# Go to specific window
-super + Tab
-	WindowSelector
 	
 #Focus windows by direction, works with multihead
-# super +  {a,s,w,d}
-#     focusmover {west,south,north,east}
 
 super +  {h,j,k,l}
     focusmover {west,south,north,east}
@@ -142,25 +125,6 @@ super +  {Left,Down,Up,Right}
 # Move tiled windows. Moving a tiled window to 
 # preselected one moves into preselection instead. 
 # Moving out of the screen should move the window to next monitor if possible
-# super + shift + {a,s,w,d}
-# 	windowgrabber {west,south,north,east}
-
-super + shift + {h,j,k,l}
-	windowgrabber {west,south,north,east}
-	
-# Different style of movement: transplant into window in chosen direction
-super + shift + {Left,Down,Up,Right}
-	euclid_mover {west,south,north,east}
-
-#resize windows
-# super + ctrl + {a,s,w,d}
-# 	bspwm_resize.sh {west,south,north,east}
-
-super + ctrl + {h,j,k,l}
-	bspwm_resize.sh {west,south,north,east}
-	
-super + ctrl + {Left,Down,Up,Right}
-	bspwm_resize.sh {west,south,north,east}
 
 #
 # Layout manipulation/desktop level controls
@@ -181,10 +145,6 @@ super + alt + b
 # Undo balancing (equalize windows)
 super + ctrl + b
 	bspc node @/ -E
-
-# Toggle automatic balancing of windows
-alt + b
-	euclid_balancer
 
 # Mirror and flip leaves of tree
 super + {comma,period}
@@ -310,18 +270,14 @@ XF86Sleep
 
 # make sxhkd reload its configuration files:
 super + shift + Escape
-	pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd; notify-send 'Sxhkd' 'Reloaded config'
 
 # In case bspwmrc fails to execute/you wish have plugged in a new monitor
 super + shift + r
-	$HOME/.config/bspwm/bspwmrc
-#edit this file
-alt + ctrl + space
-	$HOME/.config/sxhkd/sxhkdrc
+	$HOME/.config/bspwm/bspwmrc; notify-send 'Bspwm' 'Reloaded config'
 # Toggle compositing
 super + ctrl + space
-	{pkill picom ,\
-	picom --experimental-backend -b }
+	{pkill picom , picom --experimental-backend -b }
 
 # Lock
 alt + l
@@ -331,3 +287,16 @@ alt + l
 super + BackSpace
   for i in $(bspc query -N -n .leaf.!window.local); do bspc node $i -k; done
 
+# Expand/contract a window by moving one of its side outward/inward
+super + s : {h,j,k,l}
+    STEP=20; SELECTION={1,2,3,4}; \
+    bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
+    bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
+
+# Show help
+super + slash
+    $HOME/.config/sxhkd/sxhkd-help
+
+# Rotate tree
+super + shift + {d,a}
+    bspc node @/ -C {forward,backward}
