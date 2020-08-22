@@ -33,7 +33,7 @@ xsetroot -cursor_name left_ptr &
 ## Repeat keys
 xset r rate 350 50 &
 ## Touchpad natural scrolling (xinput list => xinput list-props $id)
-xinput set-prop 12 320 1
+xinput set-prop 12 330 1
 xinput set-prop 12 312 1
 ## Make monitor settings persist between reboots
 eval $(awk -F'=' '/Exec=/ {print $2}' ~/.config/autostart/lxrandr-autostart.desktop) &

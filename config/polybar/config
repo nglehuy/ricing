@@ -75,7 +75,7 @@ font-7 = NotoSansCJK SC:style=Medium:pixelsize=12;3
 font-8 = NotoSansCJK TC:style=Medium:pixelsize=12;3
 
 modules-left = powermenu bspwm 
-modules-center = filesystem xbacklight cpu memory alsa battery xwindow 
+modules-center = filesystem backlight-acpi cpu memory alsa battery xwindow 
 modules-right = calendar time
 
 tray-position = right
@@ -527,8 +527,8 @@ animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-font = 3
-animation-charging-foreground = ${colors.background}
-animation-charging-background = ${colors.purple}
+animation-charging-foreground = ${colors.purple}
+animation-charging-background = ${colors.background}
 animation-charging-padding = ${settings.padding}
 animation-charging-framerate = 750
 
@@ -536,8 +536,8 @@ animation-discharging-0 = 
 animation-discharging-1 = 
 animation-discharging-2 = 
 animation-discharging-font = 3
-animation-discharging-foreground = ${colors.background}
-animation-discharging-background = ${colors.purple}
+animation-discharging-foreground = ${colors.purple}
+animation-discharging-background = ${colors.background}
 animation-discharging-padding = ${settings.padding}
 animation-discharging-framerate = 750
 

@@ -84,6 +84,7 @@ bspc rule -a discord state=floating center=true
 bspc rule -a Slack desktop=팔
 bspc rule -a Skype desktop=칠
 bspc rule -a GitKraken desktop=사
+bspc rule -a kitty desktop=이
 
 ##  Autogap adjusts windowgap automatically according to the number of
 ##  windows on the desktop. Using it disables negative window gap.
