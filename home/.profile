@@ -10,13 +10,13 @@ export PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
 export XDG_CONFIG_DIRS=/usr/etc/xdg:/etc/xdg
-export TERMINAL="/usr/bin/kitty"
+export TERMINAL="env DRI_PRIME=1 /usr/bin/kitty"
 export PANEL_HEIGHT=27
 export PANEL_TOP_MARGIN=0
 export BORDER_SIZE=1
 export GAP=10
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export EDITOR=/usr/bin/nvim
+export EDITOR="/usr/bin/nvim"
 export VISUAL="/usr/bin/ranger --selectfile"
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 # Kitty to use ibus
