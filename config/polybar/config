@@ -79,7 +79,7 @@ modules-center = filesystem backlight-acpi cpu memory alsa battery xwindow
 modules-right = calendar time
 
 tray-position = right
-tray-padding = 6
+tray-padding = 8
 tray-detached = false
 tray-offset-x = 0
 tray-offset-y = 0
