@@ -263,7 +263,7 @@ ctrl + alt + t
   open-terminal-here
 
 super + shift + Return
-	env DRI_PRIME=1 $TERMINAL
+	$TERMINAL
 	
 super + r
 	rofi-finder.sh
