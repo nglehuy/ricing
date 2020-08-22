@@ -14,4 +14,6 @@ Colorschemes are managed by `pywal`.
 
 ![Screenshot](./images/desktop.png)
 
-![Screenshot Fake Busy](./images/fake_busy.png)
+![Screenshot Fake Busy](./images/fakebusy.png)
+
+![Screenshot Neovide](./images/neovide.png)
