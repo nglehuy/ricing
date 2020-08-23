@@ -68,6 +68,7 @@ sxhkd &
 xrandr --output HDMI-1 --auto --primary --size 1920x1080 --rate 60
 xrandr --output eDP-1 --auto --size 1920x1080 --noprimary --right-of HDMI-1 --rate 60
 ~/.config/polybar/launch.sh &
+killall redshift
 dex -a -s ~/.config/autostart/ &
 wmname LG3D
 ## Wallpaper

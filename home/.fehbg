@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/usr/share/backgrounds/cia.jpg' 
+feh --no-fehbg --bg-fill '/usr/share/backgrounds/onedarkarch.png' 
