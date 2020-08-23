@@ -79,9 +79,9 @@ bspc rule -a '*:eog' state=floating
 bspc rule -a Gnome-disks state=floating
 bspc rule -a Nm-connection-editor state=floating
 bspc rule -a Gnome-terminal state=floating
-bspc rule -a discord state=floating center=true
 #bspc desktop I --layout monocle
 #bspc desktop II --layout monocle
+bspc rule -a discord state=tiled desktop=육
 bspc rule -a Slack desktop=팔
 bspc rule -a TelegramDesktop desktop=팔
 bspc rule -a Skype desktop=칠
