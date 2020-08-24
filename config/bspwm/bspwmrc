@@ -62,6 +62,7 @@ bspc rule -a Skype desktop=칠
 bspc rule -a GitKraken desktop=사
 bspc rule -a kitty desktop=이
 bspc rule -a neovide desktop=삼
+bspc rule -a Google-chrome desktop=일
 
 ##  Autogap adjusts windowgap automatically according to the number of
 ##  windows on the desktop. Using it disables negative window gap.
