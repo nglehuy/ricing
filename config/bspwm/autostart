@@ -1,5 +1,6 @@
 #!/bin/bash
-sleep 1
+## Picom
+picom --experimental-backend -b &
 ## export GTK2_RC_FILES="$HOME/.gtkrc-2.0" &
 xrdb merge .Xresources &
 
@@ -30,9 +31,6 @@ xset r rate 350 50 &
 ## Touchpad natural scrolling (xinput list => xinput list-props $id)
 xinput set-prop 'DELL0844:00 04F3:3074 Touchpad' 'libinput Tapping Enabled' 1
 xinput set-prop 'DELL0844:00 04F3:3074 Touchpad' 'libinput Natural Scrolling Enabled' 1
-
-## Make monitor settings persist between reboots
-eval $(awk -F'=' '/Exec=/ {print $2}' ~/.config/autostart/lxrandr-autostart.desktop) &
 
 ## Map super key to trigger rofi when used alone
 xcape -e 'Super_L=Super_L|Shift_L|space' &
@@ -65,13 +63,11 @@ ibus-daemon -drx &
 ## Keybindings daemon
 sxhkd &
 
-## POLYBAR
-~/.config/polybar/launch.sh &
-killall redshift
+killall -q redshift
 dex -a -s ~/.config/autostart/ &
 
 ## Wallpaper
 ~/.fehbg &
 
-## Picom
-picom --experimental-backend -b &
+## POLYBAR
+~/.config/polybar/launch.sh &
