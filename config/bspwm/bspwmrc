@@ -83,6 +83,4 @@ bspc rule -a Google-chrome desktop=일
 
 ## This creates and names desktops for multiple monitors.
 $HOME/.config/bspwm/workspaces_multimonitor &
-## Autostart apps
-#Source autostartfile. Uncomment this if you use bspwm-git
 $HOME/.config/bspwm/autostart &

@@ -36,3 +36,5 @@ echo "Copying backgrounds ..."
 sudo cp -rfT $PWD/backgrounds /usr/share/backgrounds
 
 wal --theme nord
+
+gsettings set org.gnome.desktop.interface cursor-theme Layan-white-cursors
