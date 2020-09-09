@@ -269,7 +269,7 @@ super + ctrl + space
 	{pkill picom , picom --experimental-backend -b }
 
 # Lock
-super + l
+alt + l
     dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
 
 # Remove receptacles
@@ -281,6 +281,12 @@ super + s : {h,j,k,l}
     STEP=20; SELECTION={1,2,3,4}; \
     bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
     bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
+
+# Focus
+super + {h,j,k,l}
+    d={west,south,north,east}; \
+    bspc node --focus $d || \
+    bspc monitor --focus $d
 
 # Show help
 super + slash
