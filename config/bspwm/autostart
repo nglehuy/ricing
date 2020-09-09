@@ -72,4 +72,5 @@ gnome-screensaver &
 
 ## Redshift
 killall -q redshift
+while pgrep -u $UID redshift >/dev/null; do sleep 1; done
 redshift &
