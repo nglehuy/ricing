@@ -7,16 +7,13 @@ sudo pacman -S --needed --noconfirm dunst \
   nitrogen \
   zathura polkit-gnome lightdm lightdm-gtk-greeter lightdm-pantheon-greeter light-locker \
   papirus-icon-theme \
-  blueman xorg-xsetroot \
-  ibus \
+  blueman xorg-xsetroot xorg-fonts-misc ibus \
   ttf-font-awesome noto-fonts noto-fonts-extra noto-fonts-cjk noto-fonts-emoji \
   yad rofi picom sxhkd bspwm python-pywal \
   gnome-disk-utility \
   discord kitty
 
-yay -S --needed --noconfirm nerd-fonts-fira-code radeontop-git polybar layan-cursor-theme-git
-
-yay -Rcns i3wm
+#yay -S --needed --noconfirm nerd-fonts-fira-code radeontop-git polybar-git layan-cursor-theme-git
 
 echo "Add user to video group ..."
 sudo usermod -a -G video $USER
@@ -29,6 +26,9 @@ cp -l -rfT $PWD/config $HOME/.config
 
 echo "Linking /root/.config/gtk-3.0 directory ..."
 sudo cp -l -rfT $PWD/config/gtk-3.0 /root/.config/gtk-3.0
+
+echo "Copying backgrounds ..."
+sudo cp -rfT $PWD/themes /usr/share/themes
 
 echo "Copying backgrounds ..."
 sudo cp -rfT $PWD/backgrounds /usr/share/backgrounds

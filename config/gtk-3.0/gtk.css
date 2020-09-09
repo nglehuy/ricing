@@ -27,15 +27,13 @@ headerbar:backdrop .titlebutton {
   padding: 8px;
 }
 
-.maximized .csd headerbar,
-.maximized .csd headerbar:backdrop,
-.maximized headerbar,
-.maximized headerbar:backdrop {
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-}
-
-
+/* .maximized .csd headerbar, */
+/* .maximized .csd headerbar:backdrop, */
+/* .maximized headerbar, */
+/* .maximized headerbar:backdrop { */
+/*   border-top-right-radius: 5px; */
+/*   border-top-left-radius: 5px; */
+/* } */
 
 /* * {
   font-weight: 600;

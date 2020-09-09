@@ -3,7 +3,7 @@ configuration {
 /*	width: 50;*/
 	lines: 10;
 /*	columns: 1;*/
-	font: "Noto Sans Mono Bold 16";
+	font: "Noto Sans Mono Bold 14";
 /*	bw: 9;*/
 /*	location: 0;*/
 /*	padding: 5;*/
