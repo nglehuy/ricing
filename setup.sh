@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 echo "Installing apps ..."
 sudo pacman -S --needed --noconfirm dunst \
@@ -8,14 +8,15 @@ sudo pacman -S --needed --noconfirm dunst \
   zathura polkit-gnome lightdm lightdm-pantheon-greeter light-locker \
   papirus-icon-theme \
   blueman xorg-xsetroot \
-  ibus ibus-hangul \
+  ibus \
   ttf-font-awesome noto-fonts noto-fonts-extra noto-fonts-cjk noto-fonts-emoji \
   yad rofi picom sxhkd bspwm python-pywal \
   gnome-disk-utility \
   discord kitty
 
-yay -S --needed --noconfirm slack-desktop ibus-bamboo \
-    nerd-fonts-fira-code radeontop oomox polybar layan-cursor-theme-git
+yay -S --needed --noconfirm nerd-fonts-fira-code radeontop-git polybar layan-cursor-theme-git
+
+yay -Rcns i3wm
 
 echo "Add user to video group ..."
 sudo usermod -a -G video $USER
