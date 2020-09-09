@@ -15,6 +15,8 @@ sudo pacman -S --needed --noconfirm dunst \
 
 yay -S --needed --noconfirm nerd-fonts-fira-code radeontop-git polybar-git layan-cursor-theme-git
 
+yay -Rcns i3-wm
+
 echo "Add user to video group ..."
 sudo usermod -a -G video $USER
 

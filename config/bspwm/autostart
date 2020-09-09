@@ -64,7 +64,7 @@ killall -q redshift
 dex -a -s ~/.config/autostart/ &
 
 ## Wallpaper
-nitrogen --set-scaled /usr/share/backgrounds/archnord.png
+nitrogen --restore
 
 ## POLYBAR
 ~/.config/polybar/launch.sh &
