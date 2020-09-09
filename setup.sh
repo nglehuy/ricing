@@ -5,7 +5,7 @@ sudo pacman -S --needed --noconfirm dunst \
   network-manager-applet nm-connection-editor networkmanager \
   light dex \
   nitrogen \
-  zathura polkit-gnome lightdm lightdm-pantheon-greeter light-locker \
+  zathura polkit-gnome lightdm lightdm-gtk-greeter lightdm-pantheon-greeter light-locker \
   papirus-icon-theme \
   blueman xorg-xsetroot \
   ibus \
