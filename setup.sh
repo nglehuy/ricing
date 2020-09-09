@@ -5,7 +5,7 @@ sudo pacman -S --needed --noconfirm dunst \
   network-manager-applet nm-connection-editor networkmanager \
   light dex \
   nitrogen \
-  zathura polkit-gnome lightdm lightdm-gtk-greeter lightdm-pantheon-greeter light-locker \
+  zathura polkit-gnome lightdm lightdm-gtk-greeter light-locker \
   papirus-icon-theme \
   blueman xorg-xsetroot xorg-fonts-misc ibus \
   ttf-font-awesome noto-fonts noto-fonts-extra noto-fonts-cjk noto-fonts-emoji \
@@ -13,7 +13,7 @@ sudo pacman -S --needed --noconfirm dunst \
   gnome-disk-utility \
   discord kitty
 
-#yay -S --needed --noconfirm nerd-fonts-fira-code radeontop-git polybar-git layan-cursor-theme-git
+yay -S --needed --noconfirm nerd-fonts-fira-code radeontop-git polybar-git layan-cursor-theme-git
 
 echo "Add user to video group ..."
 sudo usermod -a -G video $USER
