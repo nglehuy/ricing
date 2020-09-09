@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Installing apps ..."
-sudo pacman -Syu --needed --noconfirm dunst \
+sudo pacman -S --needed --noconfirm dunst \
   network-manager-applet nm-connection-editor networkmanager \
   light dex \
   nitrogen \
@@ -14,7 +14,7 @@ sudo pacman -Syu --needed --noconfirm dunst \
   gnome-disk-utility \
   discord kitty
 
-yay -Syu --needed --noconfirm slack-desktop ibus-bamboo \
+yay -S --needed --noconfirm slack-desktop ibus-bamboo \
     nerd-fonts-fira-code radeontop oomox polybar layan-cursor-theme-git
 
 echo "Add user to video group ..."
@@ -28,9 +28,6 @@ cp -l -rfT $PWD/config $HOME/.config
 
 echo "Linking /root/.config/gtk-3.0 directory ..."
 sudo cp -l -rfT $PWD/config/gtk-3.0 /root/.config/gtk-3.0
-
-echo "Linking /root/.gtkrc-2.0 directory ..."
-sudo cp -l -rfT $PWD/home/.gtkrc-2.0 /root/.gtkrc-2.0
 
 echo "Copying backgrounds ..."
 sudo cp -rfT $PWD/backgrounds /usr/share/backgrounds
