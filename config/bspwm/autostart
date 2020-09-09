@@ -41,9 +41,6 @@ xcape -e 'Super_L=Super_L|Shift_L|space' &
 ## Gnome keyring
 gnome-keyring-daemon &
 
-## Light locker
-light-locker &
-
 ## Network Manager applet
 killall -q nm-applet
 while pgrep -u $UID -x nm-applet >/dev/null; do sleep 1; done
@@ -71,3 +68,9 @@ nitrogen --set-scaled /usr/share/backgrounds/archnord.png
 
 ## POLYBAR
 ~/.config/polybar/launch.sh &
+
+## Gnome screensaver
+gnome-screensaver &
+
+## Redshift
+redshift &

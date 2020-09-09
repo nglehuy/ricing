@@ -4,8 +4,8 @@ echo "Installing apps ..."
 sudo pacman -S --needed --noconfirm dunst \
   network-manager-applet nm-connection-editor networkmanager \
   light dex \
-  nitrogen \
-  zathura polkit-gnome lightdm lightdm-gtk-greeter light-locker \
+  nitrogen redshift \
+  zathura polkit-gnome gnome gnome-screensaver \
   papirus-icon-theme \
   blueman xorg-xsetroot xorg-fonts-misc ibus \
   ttf-font-awesome noto-fonts noto-fonts-extra noto-fonts-cjk noto-fonts-emoji \

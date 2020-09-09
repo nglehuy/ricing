@@ -6,7 +6,7 @@ if xrandr | grep "$external disconnected"; then
     xrandr --output $internal --auto --primary --size 1920x1080 --rate 60
 else
     xrandr --output $external --auto --primary --size 1920x1080 --rate 60
-    xrandr --output $internal --auto --noprimary --size 1920x1080 --right-of $external --rate 60
+    xrandr --output $internal --auto --noprimary --size 1920x1080 --below $external --rate 60
 fi
 
 ##Then, create workspaces on all monitors
