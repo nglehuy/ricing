@@ -41,8 +41,8 @@ xcape -e 'Super_L=Super_L|Shift_L|space' &
 ## Gnome keyring
 gnome-keyring-daemon &
 
-## Screensaver
-gnome-screensaver &
+## Light locker
+light-locker &
 
 ## Network Manager applet
 killall -q nm-applet
@@ -55,7 +55,7 @@ while pgrep -u $UID -x blueman-applet >/dev/null; do sleep 1; done
 blueman-applet &
 
 ## PYWAL
-wal --theme base16-onedark &
+wal --theme nord &
 
 ## IBUS
 ibus-daemon -drx &
@@ -67,7 +67,7 @@ killall -q redshift
 dex -a -s ~/.config/autostart/ &
 
 ## Wallpaper
-~/.fehbg &
+nitrogen --set-scale /usr/share/backgrounds/archnord.png
 
 ## POLYBAR
 ~/.config/polybar/launch.sh &

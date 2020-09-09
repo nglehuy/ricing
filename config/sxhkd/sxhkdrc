@@ -108,20 +108,12 @@ super + {m,n}
 
 # cycle windows
 alt + {_,shift + }Tab
-  rofi -show window \
-    -selected-row 1 \
-    -kb-accept-entry "!Alt-Tab,!Alt+Alt_L" \
-    -kb-row-down "Alt+Tab" \
-    #bspc node -f {next,prev}
+    rofi -show window \
+        -selected-row 1 \
+        -kb-accept-entry "!Alt-Tab,!Alt+Alt_L" \
+        -kb-row-down "Alt+Tab" \
 	
-#Focus windows by direction, works with multihead
 
-super +  {h,j,k,l}
-    focusmover {west,south,north,east}
-
-super +  {Left,Down,Up,Right}
-    focusmover {west,south,north,east}
-        	
 # Move tiled windows. Moving a tiled window to 
 # preselected one moves into preselection instead. 
 # Moving out of the screen should move the window to next monitor if possible
@@ -220,7 +212,7 @@ super + a
 #	dmenu_recent -h $PANEL_HEIGHT -fn 'xos4 Terminus:size=15' -i
 
 ctrl + alt + t
-  open-terminal-here
+    open-terminal-here
 
 super + shift + Return
 	$TERMINAL
@@ -242,7 +234,7 @@ Print
 	shutter -C -f --min_at_startup --disable_systray
 
 shift + Print
-  shutter -C -s --min_at_startup --disable_systray
+    shutter -C -s --min_at_startup --disable_systray
 
 	
 #
@@ -259,10 +251,10 @@ XF86AudioMute
 	amixer sset Master toggle
 	
 XF86MonBrightnessDown
-  light -U 5 
+    light -U 5 
 
 XF86MonBrightnessUp
-  light -A 5
+    light -A 5
  
 
 XF86Sleep
@@ -280,12 +272,12 @@ super + ctrl + space
 	{pkill picom , picom --experimental-backend -b }
 
 # Lock
-alt + l
-  dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
+super + l
+    light-locker-command -l
 
 # Remove receptacles
 super + BackSpace
-  for i in $(bspc query -N -n .leaf.!window.local); do bspc node $i -k; done
+    for i in $(bspc query -N -n .leaf.!window.local); do bspc node $i -k; done
 
 # Expand/contract a window by moving one of its side outward/inward
 super + s : {h,j,k,l}
