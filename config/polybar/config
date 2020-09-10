@@ -65,10 +65,10 @@ padding-right = 1
 
 module-margin = 0
 
-font-0 = FiraCode Nerd Font:style=Medium:pixelsize=11;3
-font-1 = NotoSans:style=Regular:pixelsize=12;3
-font-2 = FontAwesome5Free:style=Solid:pixelsize=10;2
-font-3 = FontAwesome5Brands:style=Solid:pixelsize=10;2
+font-0 = Iosevka Term SS12 MdEx:style=Medium Extended:pixelsize=12;3
+font-1 = NotoSans:style=Medium:pixelsize=12;3
+font-2 = FontAwesome5Free:style=Solid:pixelsize=12;2
+font-3 = FontAwesome5Brands:style=Solid:pixelsize=12;2
 font-4 = NotoSansCJK KR:style=Medium:pixelsize=12;3
 font-5 = NotoSansCJK HK:style=Medium:pixelsize=12;3
 font-6 = NotoSansCJK JP:style=Medium:pixelsize=12;3

@@ -108,7 +108,11 @@ super + {m,n}
 
 # cycle windows
 alt + {_,shift + }Tab
-    rofi -show window -selected-row 1 -kb-accept-entry "!Alt-Tab,!Alt+Alt_L" -kb-row-down "Alt+Tab" 
+    rofi -show window -selected-row 1 \
+        -kb-accept-entry "!Alt-Tab,!Alt_L,!Alt+Alt_L,Return" \
+        -kb-row-down "Alt+Tab" \
+        -kb-row-up "Alt+ISO_Left_Tab,Alt+Up" \
+        -kb-cancel "Alt+Escape,Escape"
 	
 
 # Move tiled windows. Moving a tiled window to 
