@@ -38,7 +38,7 @@ xcape -e 'Super_L=Super_L|Shift_L|space' &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 ## Gnome keyring
-gnome-keyring-daemon &
+gnome-keyring-daemon -r -d
 
 ## Network Manager applet
 killall -q nm-applet
