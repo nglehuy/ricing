@@ -23,7 +23,9 @@ headerbar:backdrop .titlebutton {
   padding: 0;
 }*/
 
-.terminal-screen {
+VteTerminal,
+TerminalScreen,
+vte-terminal {
   padding: 8px;
 }
 

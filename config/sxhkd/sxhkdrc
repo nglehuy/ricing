@@ -216,7 +216,7 @@ ctrl + alt + t
     open-terminal-here
 
 super + shift + Return
-	$TERMINAL
+	env DRI_PRIME=1 $TERMINAL
 	
 super + r
 	rofi-finder.sh
@@ -280,10 +280,15 @@ alt + l
 super + BackSpace
     for i in $(bspc query -N -n .leaf.!window.local); do bspc node $i -k; done
 
-# Expand/contract a window by moving one of its side outward/inward
+# Expand a window by moving one of its side outward
 super + s : {h,j,k,l}
     STEP=20; SELECTION={1,2,3,4}; \
     bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
+    bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
+
+# Contract a window by moving one of its side inward
+super + shift + s : {h,j,k,l}
+    STEP=20; SELECTION={1,2,3,4}; \
     bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
 
 # Focus

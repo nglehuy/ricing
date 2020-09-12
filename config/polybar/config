@@ -37,14 +37,14 @@ monitor-strict = true
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in a width or height of 50% minus 10 pixels
 width = 100%
-height = ${env:PANEL_HEIGHT:24}
+height = 27
 bottom = false
 ; Offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
 ; the percentage can optionally be extended with a pixel offset like so:
 ; 50%:-10, this will result in an offset in the x or y direction 
 ; of 50% minus 10 pixels
 offset-x = 0
-offset-y = ${env:PANEL_TOP_MARGIN:5}
+offset-y = 0
 radius = 0
 fixed-center = true
 dim-value = 1.0
@@ -55,7 +55,7 @@ foreground = ${colors.foreground}
 line-size = 0
 ; line-color = #eee
 
-border-size = ${env:BORDER_SIZE:0}
+border-size = 5
 border-color = ${colors.background}
 border-transparent = false
 
@@ -64,15 +64,15 @@ padding-right = 1
 
 module-margin = 0
 
-font-0 = Iosevka Term SS12 MdEx:style=Medium Extended:pixelsize=12;3
-font-1 = NotoSans:style=Medium:pixelsize=12;3
+font-0 = Iosevka Term SS12:style=Semibold Extended:pixelsize=11;3
+font-1 = NotoSans:style=Medium:pixelsize=11;3
 font-2 = FontAwesome5Free:style=Solid:pixelsize=12;2
 font-3 = FontAwesome5Brands:style=Solid:pixelsize=12;2
-font-4 = NotoSansCJK KR:style=Medium:pixelsize=12;3
-font-5 = NotoSansCJK HK:style=Medium:pixelsize=12;3
-font-6 = NotoSansCJK JP:style=Medium:pixelsize=12;3
-font-7 = NotoSansCJK SC:style=Medium:pixelsize=12;3
-font-8 = NotoSansCJK TC:style=Medium:pixelsize=12;3
+font-4 = NotoSansCJK KR:style=Medium:pixelsize=11;3
+font-5 = NotoSansCJK HK:style=Medium:pixelsize=11;3
+font-6 = NotoSansCJK JP:style=Medium:pixelsize=11;3
+font-7 = NotoSansCJK SC:style=Medium:pixelsize=11;3
+font-8 = NotoSansCJK TC:style=Medium:pixelsize=11;3
 
 modules-left = powermenu bspwm 
 modules-center = filesystem backlight-acpi cpu memory alsa battery xwindow 
