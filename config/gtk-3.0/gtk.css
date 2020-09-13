@@ -26,7 +26,7 @@ headerbar:backdrop .titlebutton {
 VteTerminal,
 TerminalScreen,
 vte-terminal {
-  padding: 8px;
+  padding: 15px;
 }
 
 /* .maximized .csd headerbar, */

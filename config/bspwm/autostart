@@ -59,13 +59,13 @@ ibus-daemon -drx &
 ## Keybindings daemon
 sxhkd &
 
-dex -a -s ~/.config/autostart/ &
+## POLYBAR
+~/.config/polybar/launch.sh
+
+dex -a -s ~/.config/autostart/
 
 ## Wallpaper
 nitrogen --restore
-
-## POLYBAR
-~/.config/polybar/launch.sh &
 
 ## Gnome screensaver
 gnome-screensaver &
