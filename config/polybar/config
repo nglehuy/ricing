@@ -17,7 +17,8 @@
 ;==========================================================
 
 [colors]
-background = ${xrdb:background:#000000000}
+; background = ${xrdb:background:#000000000}
+background = #3b4252
 background-alt = ${xrdb:colors8:#545862}
 foreground = ${xrdb:color15:#c8ccd4}
 foreground-alt = ${xrdb:colors15:#c8ccd4}
