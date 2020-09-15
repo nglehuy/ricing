@@ -19,7 +19,7 @@
 [colors]
 ; background = ${xrdb:background:#000000000}
 background = #3b4252
-background-alt = ${xrdb:color8:#545862}
+background-alt = ${xrdb:background:#545862}
 foreground = ${xrdb:color15:#c8ccd4}
 foreground-alt = ${xrdb:color15:#c8ccd4}
 transparent = #000000000

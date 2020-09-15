@@ -3,6 +3,7 @@
 YAD_WIDTH=222  # 222 is minimum possible value
 YAD_HEIGHT=193 # 193 is minimum possible value
 DATE="$(date +"%x")"
+TOP=true
 
 case "$1" in
 --popup)
@@ -15,19 +16,13 @@ case "$1" in
     eval "$(xdotool getdisplaygeometry --shell)"
 
     # X
-    if [ "$((X + YAD_WIDTH / 2 + BORDER_SIZE))" -gt "$WIDTH" ]; then #Right side
-        : $((pos_x = WIDTH - YAD_WIDTH - BORDER_SIZE))
-    elif [ "$((X - YAD_WIDTH / 2 - BORDER_SIZE))" -lt 0 ]; then #Left side
-        : $((pos_x = BORDER_SIZE))
-    else #Center
-        : $((pos_x = X - YAD_WIDTH / 2))
-    fi
+    : $((pos_x = X - YAD_WIDTH / 2))
 
     # Y
-    if [ "$Y" -gt "$((HEIGHT / 2))" ]; then #Bottom
-        : $((pos_y = HEIGHT - YAD_HEIGHT - PANEL_HEIGHT + 2*PANEL_TOP_MARGIN - BORDER_SIZE))
-    else #Top
-        : $((pos_y = PANEL_HEIGHT + 2*PANEL_TOP_MARGIN + BORDER_SIZE))
+    if [ "$TOP" = true ]; then
+        : $((pos_y = 27 + 5 + 5))
+    else
+        : $((pos_y = HEIGHT - YAD_HEIGHT - 27 - 5 - 5))
     fi
 
     yad --calendar --show-weeks --undecorated --fixed --close-on-unfocus --no-buttons \
