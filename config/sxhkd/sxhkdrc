@@ -54,8 +54,8 @@ super + ctrl + c
 # ______________    
 
 # Autopresel (split window in its largest dimension)
-ctrl + space
-	auto-presel
+# ctrl + space
+# 	auto-presel
 	
 # Presel window for splitting in certain direction
 # alt + ctrl + {a,s,w,d}
@@ -213,7 +213,7 @@ super + a
 #	dmenu_recent -h $PANEL_HEIGHT -fn 'xos4 Terminus:size=15' -i
 
 ctrl + alt + t
-    open-terminal-here
+    /usr/bin/xst
 
 super + shift + Return
 	env DRI_PRIME=1 $TERMINAL
