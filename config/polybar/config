@@ -480,11 +480,11 @@ label-volume-foreground = ${colors.foreground}
 label-volume-background = ${colors.background-alt}
 label-volume-padding-right = ${settings.padding}
 
-format-muted = "  "
+format-muted = ""
 format-muted-font = 3
 format-muted-foreground = ${colors.yellow}
 format-muted-background = ${colors.background-alt}
-format-muted-padding = 0
+format-muted-padding = 2
 
 ramp-volume-font = 3
 ramp-volume-0 = 

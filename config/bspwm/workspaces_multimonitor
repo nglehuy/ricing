@@ -3,42 +3,42 @@ internal=eDP-1
 external=HDMI-1
 
 if xrandr | grep "$external disconnected"; then
-    xrandr --output $internal --auto --primary --size 1920x1080 --rate 60
+    xrandr --output $internal--auto --primary --size 1920x1080
 else
-    xrandr --output $external --auto --primary --size 1920x1080 --rate 60
-    xrandr --output $internal --auto --noprimary --size 1920x1080 --below $external --rate 60
+    xrandr --output $internal --auto --noprimary --size 1920x1080
+    xrandr --output $external --auto --primary --size 1920x1080 --right-of $internal
 fi
 
 ##Then, create workspaces on all monitors
-  I=1
-  M=$(bspc query -M | wc -l)
-  if [[ "$M" == 1 ]]; then
+I=1
+M=$(bspc query -M | wc -l)
+if [[ "$M" == 1 ]]; then
     bspc monitor -d 일 이 삼 사 오 육 칠 팔 구 십
-  elif [[ "$M" == 2 ]]; then
-     bspc monitor $(bspc query -M | awk NR==1) -d 일 이 삼 사 오
-     bspc monitor $(bspc query -M | awk NR==2) -d 육 칠 팔 구 십
-  elif [[ "$M" == 3 ]]; then
-     bspc monitor $(bspc query -M | awk NR==1) -d 일 이 삼 사
-     bspc monitor $(bspc query -M | awk NR==2) -d 오 육 칠
-     bspc monitor $(bspc query -M | awk NR==3) -d 팔 구 십
-  elif [[ "$M" == 4 ]]; then
-     bspc monitor $(bspc query -M | awk NR==1) -d 일 이 삼
-     bspc monitor $(bspc query -M | awk NR==2) -d 사 오 육
-     bspc monitor $(bspc query -M | awk NR==3) -d 칠 팔
-     bspc monitor $(bspc query -M | awk NR==4) -d 구 십
-  elif [[ "$M" == 5 ]]; then
-     bspc monitor $(bspc query -M | awk NR==1) -d 일 이
-     bspc monitor $(bspc query -M | awk NR==2) -d 삼 사
-     bspc monitor $(bspc query -M | awk NR==3) -d 오 육
-     bspc monitor $(bspc query -M | awk NR==4) -d 칠 팔
-     bspc monitor $(bspc query -M | awk NR==5) -d 구 십
-  else
+elif [[ "$M" == 2 ]]; then
+    bspc monitor $(bspc query -M | awk NR==1) -d 일 이 삼 사 오
+    bspc monitor $(bspc query -M | awk NR==2) -d 육 칠 팔 구 십
+# elif [[ "$M" == 3 ]]; then
+#    bspc monitor $(bspc query -M | awk NR==1) -d 일 이 삼 사
+#    bspc monitor $(bspc query -M | awk NR==2) -d 오 육 칠
+#    bspc monitor $(bspc query -M | awk NR==3) -d 팔 구 십
+# elif [[ "$M" == 4 ]]; then
+#    bspc monitor $(bspc query -M | awk NR==1) -d 일 이 삼
+#    bspc monitor $(bspc query -M | awk NR==2) -d 사 오 육
+#    bspc monitor $(bspc query -M | awk NR==3) -d 칠 팔
+#    bspc monitor $(bspc query -M | awk NR==4) -d 구 십
+# elif [[ "$M" == 5 ]]; then
+#    bspc monitor $(bspc query -M | awk NR==1) -d 일 이
+#    bspc monitor $(bspc query -M | awk NR==2) -d 삼 사
+#    bspc monitor $(bspc query -M | awk NR==3) -d 오 육
+#    bspc monitor $(bspc query -M | awk NR==4) -d 칠 팔
+#    bspc monitor $(bspc query -M | awk NR==5) -d 구 십
+else
     for monitor in $(bspc query -M); do
-    bspc monitor $monitor \
-        -n "$I" \
-        -d $I/{a,b,c}
-     let I++
-     done
-  fi
+        bspc monitor $monitor \
+            -n "$I" \
+            -d $I/{a,b,c}
+        let I++
+    done
+fi
 
 wmname LG3D

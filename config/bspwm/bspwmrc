@@ -60,9 +60,6 @@ bspc rule -a discord state=tiled desktop=칠
 bspc rule -a Slack state=tiled desktop=칠
 bspc rule -a TelegramDesktop desktop=팔
 bspc rule -a GitKraken desktop=오
-bspc rule -a kitty desktop=이
-bspc rule -a neovide desktop=삼
-bspc rule -a Google-chrome desktop=일
 
 ##  Autogap adjusts windowgap automatically according to the number of
 ##  windows on the desktop. Using it disables negative window gap.
